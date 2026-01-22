@@ -2,17 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/dashboard.js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/dashboard.js"
+      "dest": "api/index.js"
     }
   ],
   "env": {
     "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/index.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
   }
 }
