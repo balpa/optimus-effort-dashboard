@@ -1,0 +1,10 @@
+legacy/
+scripts/
+*.md
+.git/
+.gitignore
+.github/
+start-ngrok.sh
+railway.json
+Procfile
+.railwayignore

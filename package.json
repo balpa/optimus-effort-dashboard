@@ -5,10 +5,13 @@
   "main": "src/dashboard.js",
   "scripts": {
     "start": "node src/dashboard.js",
+    "dev": "node src/dashboard.js",
+    "build": "echo 'No build step required'",
     "analyze": "node src/analyze-all.js",
     "analyze:qa": "node src/analyze-all-qa.js",
     "fetch-current": "node src/fetch-current.js",
     "fetch-current:qa": "node src/fetch-current-qa.js",
+    "weekly-update": "node scripts/weekly-update.js",
     "ngrok": "./start-ngrok.sh",
     "legacy:dashboard": "node dashboard.js",
     "legacy:analyze": "node script.js"

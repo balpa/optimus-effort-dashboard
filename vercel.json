@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/dashboard.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/dashboard.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
