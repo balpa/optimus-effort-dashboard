@@ -8,17 +8,24 @@ const { calculateAverageEffort } = require('./services/analyzer');
 
 const app = express();
 
+// Get project root directory (one level up from src/)
+const PROJECT_ROOT = path.join(__dirname, '..');
+
 const loadData = (mode = 'dev') => {
   const jsonPath = mode === 'dev' ? 
-    path.resolve(config.paths.devData) : 
-    path.resolve(config.paths.qaData);
+    path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-data.json') : 
+    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-data.json');
+  
+  console.log(`[loadData] Attempting to load: ${jsonPath}`);
+  console.log(`[loadData] File exists: ${fs.existsSync(jsonPath)}`);
+  
   return fs.existsSync(jsonPath) ? JSON.parse(fs.readFileSync(jsonPath, 'utf8')) : null;
 };
 
 const loadTextReport = (mode = 'dev') => {
   const reportPath = mode === 'dev' ? 
-    path.resolve(config.paths.devReport) : 
-    path.resolve(config.paths.qaReport);
+    path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-report.txt') : 
+    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-report.txt');
   return fs.existsSync(reportPath) ? fs.readFileSync(reportPath, 'utf8') : '';
 };
 
