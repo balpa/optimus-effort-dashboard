@@ -5,7 +5,7 @@ const jiraService = require('../services/jira');
 const analyzer = require('../services/analyzer');
 const { getCurrentMonth } = require('../utils/date');
 
-const updateCurrentMonth = async (mode = 'dev') => {
+const updateCurrentMonth = async (mode = 'dev', force = false) => {
   const { modes, paths } = config.jira;
   const modeConfig = modes[mode];
   
@@ -14,15 +14,26 @@ const updateCurrentMonth = async (mode = 'dev') => {
   }
   
   const currentMonth = getCurrentMonth();
-  const dataPath = mode === 'dev' ? config.paths.devData : config.paths.qaData;
+  const dataPath = mode === 'dev' ? config.paths.devData : 
+                   mode === 'qa' ? config.paths.qaData : 
+                   config.paths.qaBoardData;
   
-  console.log(`\n📊 Fetching current month (${mode.toUpperCase()} mode): ${currentMonth.name}`);
-  console.log(`Period: ${currentMonth.start} to ${currentMonth.end}`);
-  console.log(`Field: ${modeConfig.fieldName}\n`);
+  // Check if data was already fetched today (unless force is true)
+  if (!force) {
+    const resolvedDataPath = path.resolve(dataPath);
+    if (fs.existsSync(resolvedDataPath)) {
+      const stats = fs.statSync(resolvedDataPath);
+      const today = new Date().toDateString();
+      const fileDate = new Date(stats.mtime).toDateString();
+      
+      if (today === fileDate) {
+        const allData = JSON.parse(fs.readFileSync(resolvedDataPath, 'utf8'));
+        return allData;
+      }
+    }
+  }
   
   const issues = await jiraService.fetchAllPages(currentMonth.start, currentMonth.end, mode);
-  
-  console.log(`\nTotal issues fetched: ${issues.length}\n`);
   
   const changes = analyzer.analyzeEffortChanges(issues, config.analysis.basePoints, mode);
   const distribution = analyzer.analyzeEffortDistribution(issues, mode);
@@ -54,12 +65,6 @@ const updateCurrentMonth = async (mode = 'dev') => {
   }
   
   fs.writeFileSync(resolvedDataPath, JSON.stringify(allData, null, 2));
-  
-  console.log(`✅ Current month data updated in ${path.basename(resolvedDataPath)}`);
-  console.log(`   Mode: ${mode.toUpperCase()}`);
-  console.log(`   Month: ${currentMonth.name}`);
-  console.log(`   Total Issues: ${issues.length}`);
-  console.log(`   Total Changes: ${changes.length}`);
   
   return allData;
 };

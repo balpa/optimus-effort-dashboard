@@ -8,16 +8,16 @@ const { calculateAverageEffort } = require('./services/analyzer');
 
 const app = express();
 
-// Get project root directory (one level up from src/)
+//TODO: mobile responsive design
+
 const PROJECT_ROOT = path.join(__dirname, '..');
 
 const loadData = (mode = 'dev') => {
   const jsonPath = mode === 'dev' ? 
     path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-data.json') : 
-    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-data.json');
-  
-  console.log(`[loadData] Attempting to load: ${jsonPath}`);
-  console.log(`[loadData] File exists: ${fs.existsSync(jsonPath)}`);
+    mode === 'qa' ?
+    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-data.json') :
+    path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-data.json');
   
   return fs.existsSync(jsonPath) ? JSON.parse(fs.readFileSync(jsonPath, 'utf8')) : null;
 };
@@ -25,7 +25,9 @@ const loadData = (mode = 'dev') => {
 const loadTextReport = (mode = 'dev') => {
   const reportPath = mode === 'dev' ? 
     path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-report.txt') : 
-    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-report.txt');
+    mode === 'qa' ?
+    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-report.txt') :
+    path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-report.txt');
   return fs.existsSync(reportPath) ? fs.readFileSync(reportPath, 'utf8') : '';
 };
 
@@ -93,7 +95,7 @@ app.get('/', (req, res) => {
   const totalChangesData = filteredMonths.map(m => m.totalChanges);
   const totalIssuesData = filteredMonths.map(m => m.totalIssues);
 
-  const colors = ['#4CAF50', '#2196F3', '#FF9800', '#F44336', '#9C27B0', '#00BCD4', '#FFEB3B', '#795548', '#607D8B', '#E91E63', '#3F51B5', '#009688'];
+  const colors = ['#ff4757', '#00ffff', '#feca57', '#2ed573', '#ff6348', '#1e90ff', '#ff79c6', '#50fa7b', '#ffb86c', '#8be9fd', '#bd93f9', '#ff5555'];
   
   const transitionDatasets = sortedTransitions.map((transition, index) => {
     const [from, to] = transition.split('→');
@@ -158,8 +160,9 @@ app.get('/', (req, res) => {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${fieldName} Dashboard - ${mode.toUpperCase()} Mode</title>
+  <title>${fieldName} Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Staatliches&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -168,10 +171,14 @@ app.get('/', (req, res) => {
     }
     
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, ${mode === 'dev' ? '#667eea 0%, #764ba2 100%' : '#11998e 0%, #38ef7d 100%'});
+      font-family: 'Staatliches', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px),
+        linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #0f0f1e 100%);
       min-height: 100vh;
       padding: 20px;
+      color: #fff;
     }
     
     .container {
@@ -180,59 +187,114 @@ app.get('/', (req, res) => {
     }
     
     .mode-toggle {
-      background: white;
+      background: #16213e;
       padding: 15px 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      border-radius: 20px;
+      box-shadow: 
+        0 0 20px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.5)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.5)' : 'rgba(254, 202, 87, 0.5)'},
+        inset 0 0 20px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
       display: flex;
       justify-content: center;
       gap: 15px;
+      border: 2px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
     }
     
     .mode-toggle a {
       padding: 12px 30px;
-      border-radius: 8px;
+      border-radius: 15px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
-      font-size: 1.1em;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', sans-serif;
     }
     
     .mode-toggle a.active {
-      background: linear-gradient(135deg, ${mode === 'dev' ? '#667eea, #764ba2' : '#11998e, #38ef7d'});
-      color: white;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      background: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      color: #1a1a2e;
+      box-shadow: 
+        0 0 30px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.8)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.8)' : 'rgba(254, 202, 87, 0.8)'},
+        0 0 60px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.4)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.4)' : 'rgba(254, 202, 87, 0.4)'};
+      animation: neonPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes neonPulse {
+      0%, 100% { 
+        box-shadow: 
+          0 0 20px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.8)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.8)' : 'rgba(254, 202, 87, 0.8)'},
+          0 0 40px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.4)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.4)' : 'rgba(254, 202, 87, 0.4)'};
+      }
+      50% { 
+        box-shadow: 
+          0 0 30px ${mode === 'dev' ? 'rgba(255, 71, 87, 1)' : mode === 'qa' ? 'rgba(0, 255, 255, 1)' : 'rgba(254, 202, 87, 1)'},
+          0 0 60px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.6)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.6)' : 'rgba(254, 202, 87, 0.6)'};
+      }
     }
     
     .mode-toggle a:not(.active) {
-      background: #f5f5f5;
-      color: #666;
+      background: transparent;
+      color: #ffffff80;
+      border: 2px solid #ffffff30;
     }
     
     .mode-toggle a:not(.active):hover {
-      background: #e0e0e0;
+      background: #ffffff10;
+      color: #fff;
+      border-color: #ffffff60;
       transform: translateY(-2px);
     }
     
     .header {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 
+        0 0 40px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'},
+        inset 0 0 30px rgba(0,0,0,0.3);
       margin-bottom: 30px;
       text-align: center;
+      border: 3px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent,
+        ${mode === 'dev' ? 'rgba(255, 71, 87, 0.1)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.1)' : 'rgba(254, 202, 87, 0.1)'},
+        transparent
+      );
     }
     
     .header h1 {
-      color: #333;
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      font-size: 3.5em;
+      margin-bottom: 15px;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'};
+      position: relative;
+      z-index: 1;
     }
     
     .header p {
-      color: #666;
-      font-size: 1.1em;
+      color: #feca57;
+      font-size: 1.3em;
+      letter-spacing: 3px;
+      text-shadow: none;
+      position: relative;
+      z-index: 1;
     }
     
     .stats-grid {
@@ -243,60 +305,113 @@ app.get('/', (req, res) => {
     }
     
     .stat-card {
-      background: white;
+      background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
       padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 
+        0 0 20px rgba(0,0,0,0.5),
+        inset 0 0 20px rgba(0,0,0,0.2);
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
+      border: 2px solid #ffffff20;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      z-index: -1;
+      border-radius: 15px;
     }
     
     .stat-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-shadow: 
+        0 0 30px rgba(0,0,0,0.7),
+        0 0 40px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'};
+      border-color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
     }
     
     .stat-card h3 {
-      color: #666;
-      font-size: 0.9em;
+      color: #feca57;
+      font-size: 1em;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-shadow: none;
     }
     
     .stat-card .value {
-      color: #333;
-      font-size: 2.5em;
+      color: #fff;
+      font-size: 3em;
       font-weight: bold;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 3px;
     }
     
-    .stat-card.primary .value { color: ${mode === 'dev' ? '#667eea' : '#11998e'}; }
-    .stat-card.success .value { color: #4CAF50; }
-    .stat-card.warning .value { color: #FF9800; }
+    .stat-card.primary .value { 
+      color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; 
+      text-shadow: 0 0 5px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'};
+    }
+    .stat-card.success .value { 
+      color: #2ed573; 
+      text-shadow: 0 0 5px rgba(46, 213, 115, 0.3);
+    }
+    .stat-card.warning .value { 
+      color: #ffa502; 
+      text-shadow: 0 0 5px rgba(255, 165, 2, 0.3);
+    }
     
     .chart-container {
-      background: white;
+      background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      box-shadow: 
+        0 0 30px rgba(0,0,0,0.5),
+        inset 0 0 30px rgba(0,0,0,0.2);
       margin-bottom: 30px;
       position: relative;
+      border: 2px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}50;
     }
     
     .chart-title {
-      font-size: 1.5em;
-      color: #333;
+      font-size: 2em;
+      color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
       margin-bottom: 20px;
       text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-shadow: 0 0 5px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'};
     }
     
     .data-table {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      margin-bottom: 30px;
+      background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 
+        0 0 30px rgba(0,0,0,0.5),
+        inset 0 0 30px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
       overflow-x: auto;
+      border: 2px solid ${mode === 'dev' ? '#ff475750' : '#00ffff50'};
+    }
+    
+    .table-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .table-grid .data-table {
+      margin-bottom: 0;
     }
     
     table {
@@ -305,28 +420,41 @@ app.get('/', (req, res) => {
     }
     
     th, td {
-      padding: 15px;
+      padding: 10px 12px;
       text-align: left;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ffffff20;
+      font-size: 0.9em;
     }
     
     th {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      font-weight: 600;
+      background: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      color: #1a1a2e;
+      font-weight: 700;
       text-transform: uppercase;
       font-size: 0.85em;
       letter-spacing: 1px;
       position: sticky;
       top: 0;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    
+    td {
+      color: #fff;
     }
     
     tr:hover {
-      background: #f5f5f5;
+      background: rgba(255,255,255,0.05);
     }
     
     .total-row {
-      background: #fff3cd;
+      background: rgba(254, 202, 87, 0.2);
+      font-weight: bold;
+      border-top: 3px solid #feca57;
+      border-bottom: 3px solid #feca57;
+    }
+    
+    .total-row td {
+      color: #feca57;
       font-weight: bold;
     }
     
@@ -358,27 +486,38 @@ app.get('/', (req, res) => {
       display: flex;
       gap: 10px;
       margin-bottom: 20px;
-      border-bottom: 2px solid #eee;
+      border-bottom: 3px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      box-shadow: 0 3px 20px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'};
     }
     
     .tab {
-      padding: 12px 24px;
-      background: #f5f5f5;
-      border: none;
+      padding: 15px 30px;
+      background: transparent;
+      border: 2px solid #ffffff30;
       cursor: pointer;
-      font-size: 1em;
-      font-weight: 600;
-      border-radius: 8px 8px 0 0;
+      font-size: 1.1em;
+      font-weight: 700;
+      border-radius: 12px 12px 0 0;
       transition: all 0.3s ease;
+      color: #ffffff80;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
     
     .tab:hover {
-      background: #e0e0e0;
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      border-color: #ffffff60;
     }
     
     .tab.active {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
+      background: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      color: #1a1a2e;
+      border-color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      box-shadow: 
+        0 0 20px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.8)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.8)' : 'rgba(254, 202, 87, 0.8)'},
+        0 0 40px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.4)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.4)' : 'rgba(254, 202, 87, 0.4)'};
     }
     
     .tab-content {
@@ -387,52 +526,78 @@ app.get('/', (req, res) => {
     
     .tab-content.active {
       display: block;
+      animation: neonFadeIn 0.5s ease;
+    }
+    
+    @keyframes neonFadeIn {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px);
+        filter: blur(10px);
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0);
+        filter: blur(0);
+      }
     }
     
     .month-detail {
       margin-bottom: 30px;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 10px;
-      border-left: 4px solid #667eea;
+      padding: 25px;
+      background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+      border-radius: 15px;
+      border-left: 5px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      box-shadow: 
+        0 0 20px rgba(0,0,0,0.5),
+        inset 0 0 20px rgba(0,0,0,0.2);
     }
     
     .month-detail h3 {
-      color: #333;
-      margin-bottom: 15px;
-      font-size: 1.3em;
+      color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 3px;
+      text-shadow: 0 0 5px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'};
     }
     
     .change-group {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     
     .change-group h4 {
-      color: #666;
-      margin-bottom: 8px;
-      font-size: 1em;
+      color: #feca57;
+      margin-bottom: 12px;
+      font-size: 1.1em;
+      letter-spacing: 2px;
     }
     
     .issue-keys {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
     
     .issue-key {
-      background: #667eea;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 5px;
-      font-size: 0.85em;
-      font-weight: 500;
+      background: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      color: #1a1a2e;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9em;
+      font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.5)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.5)' : 'rgba(254, 202, 87, 0.5)'};
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
     }
     
     .issue-key:hover {
-      background: #764ba2;
-      transform: scale(1.05);
+      transform: scale(1.1);
+      box-shadow: 
+        0 0 20px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.8)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.8)' : 'rgba(254, 202, 87, 0.8)'},
+        0 0 40px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.5)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.5)' : 'rgba(254, 202, 87, 0.5)'};
     }
   </style>
 </head>
@@ -440,25 +605,28 @@ app.get('/', (req, res) => {
   <div class="container">
     <div class="mode-toggle">
       <a href="/?mode=dev${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'dev' ? 'active' : ''}">
-        💻 DEV (Story Points)
+        DEV (Story Points)
       </a>
       <a href="/?mode=qa${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'qa' ? 'active' : ''}">
-        🧪 QA (QA Efforts)
+        QA (QA Task)
+      </a>
+      <a href="/?mode=qa-board${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'qa-board' ? 'active' : ''}">
+        QA (Board Task)
       </a>
     </div>
     
     <div class="header">
-      <h1>📊 ${fieldName} Dashboard - ${mode.toUpperCase()} Mode</h1>
+      <h1>${fieldName} Update Dashboard</h1>
       <p>Analysis of ${fieldName} increased from 1/2/3/5 to higher values (March 2025 - ${filteredMonths[filteredMonths.length - 1]?.name || 'Present'})</p>
       
-      <div style="margin-top: 20px;">
-        <label style="font-size: 1em; color: #666; margin-right: 10px;">Filter by Base ${fieldName}:</label>
-        <select onchange="window.location.href='/?mode=${mode}&base='+this.value" style="padding: 10px 20px; font-size: 1em; border-radius: 8px; border: 2px solid ${mode === 'dev' ? '#667eea' : '#11998e'}; background: white; cursor: pointer;">
-          <option value="">All (1, 2, 3, 5)</option>
-          <option value="1" ${selectedBase === 1 ? 'selected' : ''}>From 1</option>
-          <option value="2" ${selectedBase === 2 ? 'selected' : ''}>From 2</option>
-          <option value="3" ${selectedBase === 3 ? 'selected' : ''}>From 3</option>
-          <option value="5" ${selectedBase === 5 ? 'selected' : ''}>From 5</option>
+      <div style="margin-top: 25px; position: relative; z-index: 1;">
+        <label style="font-size: 1.1em; color: #feca57; margin-right: 15px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Bebas Neue', sans-serif;">Filter by Base ${fieldName}:</label>
+        <select onchange="window.location.href='/?mode=${mode}&base='+this.value" style="padding: 12px 25px; font-size: 1.1em; border-radius: 10px; border: 2px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; background: #16213e; color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; cursor: pointer; font-family: 'Staatliches', sans-serif; letter-spacing: 1px; box-shadow: 0 0 15px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.6)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.6)' : 'rgba(254, 202, 87, 0.6)'}'" onmouseout="this.style.boxShadow='0 0 15px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}'">
+          <option value="" style="background: #16213e; color: #fff;">All (1, 2, 3, 5)</option>
+          <option value="1" ${selectedBase === 1 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 1</option>
+          <option value="2" ${selectedBase === 2 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 2</option>
+          <option value="3" ${selectedBase === 3 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 3</option>
+          <option value="5" ${selectedBase === 5 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 5</option>
         </select>
       </div>
     </div>
@@ -479,11 +647,10 @@ app.get('/', (req, res) => {
     </div>
     
     <div class="tabs">
-      <button class="tab active" onclick="showTab('overview')">📈 Overview</button>
-      <button class="tab" onclick="showTab('distribution')">📊 Distribution</button>
-      <button class="tab" onclick="showTab('averages')">📊 Effort Averages</button>
-      <button class="tab" onclick="showTab('details')">📋 Details</button>
-      <button class="tab" onclick="showTab('report')">📄 Full Report</button>
+      <button class="tab active" onclick="showTab('overview', event)">Overview</button>
+      <button class="tab" onclick="showTab('distribution', event)">Distribution</button>
+      <button class="tab" onclick="showTab('averages', event)">Effort Averages</button>
+      <button class="tab" onclick="showTab('details', event)">Details</button>
     </div>
     
     <div id="overview" class="tab-content active">
@@ -498,7 +665,7 @@ app.get('/', (req, res) => {
       </div>
       
       <div class="data-table">
-        <h2 class="chart-title">Monthly Breakdown</h2>
+        <h2 class="chart-title">Monthly Breakdown & Update Rate Analysis</h2>
         <table>
           <thead>
             <tr>
@@ -506,6 +673,7 @@ app.get('/', (req, res) => {
               <th>Total Issues</th>
               <th>Total Updates</th>
               <th>Update Rate</th>
+              <th>Visualization</th>
               ${sortedTransitions.map(t => `<th>${t}</th>`).join('')}
             </tr>
           </thead>
@@ -514,12 +682,20 @@ app.get('/', (req, res) => {
               const updateRate = month.totalIssues > 0 
                 ? ((month.totalChanges / month.totalIssues) * 100).toFixed(2) 
                 : '0.00';
+              const updateRateNum = parseFloat(updateRate);
+              const rateColor = updateRateNum < 10 ? '#2ed573' : updateRateNum < 20 ? '#feca57' : '#ff4757';
+              const barWidth = Math.min(updateRateNum * 5, 100);
               return `
               <tr>
                 <td><strong>${month.name}</strong></td>
                 <td>${month.totalIssues.toLocaleString()}</td>
                 <td>${month.totalChanges}</td>
-                <td><strong>${updateRate}%</strong></td>
+                <td><strong style="color: ${rateColor}; text-shadow: 0 0 5px ${rateColor}80;">${updateRate}%</strong></td>
+                <td>
+                  <div style="background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; height: 20px; width: 100%; min-width: 120px;">
+                    <div style="background: ${rateColor}; height: 100%; width: ${barWidth}%; transition: width 0.3s ease; box-shadow: 0 0 10px ${rateColor}80;"></div>
+                  </div>
+                </td>
                 ${sortedTransitions.map(transition => {
                   const [from, to] = transition.split('→');
                   return `<td>${month.byBaseAndTarget[from]?.[to] || 0}</td>`;
@@ -527,57 +703,16 @@ app.get('/', (req, res) => {
               </tr>
             `}).join('')}
             <tr class="total-row">
-              <td><strong>TOTAL</strong></td>
-              <td>${grandTotalIssues.toLocaleString()}</td>
-              <td>${grandTotalChanges}</td>
-              <td><strong>${((grandTotalChanges / grandTotalIssues) * 100).toFixed(2)}%</strong></td>
-              ${sortedTransitions.map(t => `<td>${grandTotalByTransition[t] || 0}</td>`).join('')}
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="data-table">
-        <h2 class="chart-title">📊 Update Rate Analysis</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Month</th>
-              <th>Total Issues</th>
-              <th>Updated Tasks</th>
-              <th>Update Rate</th>
-              <th>Visualization</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${filteredMonths.map(month => {
-              const updateRate = month.totalIssues > 0 
-                ? ((month.totalChanges / month.totalIssues) * 100).toFixed(2) 
-                : '0.00';
-              const barWidth = Math.min(parseFloat(updateRate) * 5, 100);
-              return `
-              <tr>
-                <td><strong>${month.name}</strong></td>
-                <td>${month.totalIssues.toLocaleString()}</td>
-                <td>${month.totalChanges}</td>
-                <td><strong style="color: ${parseFloat(updateRate) > 15 ? '#F44336' : parseFloat(updateRate) > 10 ? '#FF9800' : '#4CAF50'}">${updateRate}%</strong></td>
-                <td>
-                  <div style="background: #e0e0e0; border-radius: 5px; overflow: hidden; height: 20px; width: 100%;">
-                    <div style="background: linear-gradient(90deg, #667eea, #764ba2); height: 100%; width: ${barWidth}%; transition: width 0.3s ease;"></div>
-                  </div>
-                </td>
-              </tr>
-            `}).join('')}
-            <tr class="total-row">
-              <td><strong>AVERAGE</strong></td>
-              <td>${(grandTotalIssues / filteredMonths.length).toFixed(0)}</td>
-              <td>${(grandTotalChanges / filteredMonths.length).toFixed(1)}</td>
+              <td><strong>TOTAL / AVG</strong></td>
+              <td>${grandTotalIssues.toLocaleString()} <span style="font-size: 0.8em; opacity: 0.7;">(avg: ${(grandTotalIssues / filteredMonths.length).toFixed(0)})</span></td>
+              <td>${grandTotalChanges} <span style="font-size: 0.8em; opacity: 0.7;">(avg: ${(grandTotalChanges / filteredMonths.length).toFixed(1)})</span></td>
               <td><strong>${((grandTotalChanges / grandTotalIssues) * 100).toFixed(2)}%</strong></td>
               <td>
-                <div style="background: #e0e0e0; border-radius: 5px; overflow: hidden; height: 20px; width: 100%;">
-                  <div style="background: linear-gradient(90deg, #FF9800, #F44336); height: 100%; width: ${Math.min(((grandTotalChanges / grandTotalIssues) * 100) * 5, 100)}%; transition: width 0.3s ease;"></div>
+                <div style="background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; height: 20px; width: 100%; min-width: 120px;">
+                  <div style="background: #feca57; height: 100%; width: ${Math.min(((grandTotalChanges / grandTotalIssues) * 100) * 5, 100)}%; transition: width 0.3s ease; box-shadow: 0 0 10px #feca5780;"></div>
                 </div>
               </td>
+              ${sortedTransitions.map(t => `<td>${grandTotalByTransition[t] || 0}</td>`).join('')}
             </tr>
           </tbody>
         </table>
@@ -586,8 +721,8 @@ app.get('/', (req, res) => {
     
     <div id="distribution" class="tab-content">
       <div class="data-table">
-        <h2 class="chart-title">📊 ${fieldName} Distribution by Month</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 20px;">Shows how many tasks have each ${fieldName.toLowerCase()} value in each month</p>
+        <h2 class="chart-title">${fieldName} Distribution by Month</h2>
+        <p style="text-align: center; color: #feca57; margin-bottom: 20px;">Shows how many tasks have each ${fieldName.toLowerCase()} value in each month</p>
         
         ${filteredMonths.map(month => {
           if (!month.distribution) return '';
@@ -602,16 +737,16 @@ app.get('/', (req, res) => {
           const maxCount = Math.max(...Object.values(dist));
           
           return `
-            <div style="margin-bottom: 40px; padding: 25px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-              <h3 style="color: #333; margin-bottom: 20px; font-size: 1.3em;">${month.name} - ${month.totalIssues} Total Issues</h3>
+            <div style="margin-bottom: 40px; padding: 25px; background: linear-gradient(135deg, #16213e 0%, #0f3460 100%); border-radius: 10px; border-left: 4px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+              <h3 style="color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; margin-bottom: 20px; font-size: 1.3em; text-shadow: 0 0 5px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;">${month.name} - ${month.totalIssues} Total Issues</h3>
               
-              <table style="width: 100%; margin-bottom: 0;">
+              <table style="width: 100%; margin-bottom: 0; color: #fff;">
                 <thead>
                   <tr>
-                    <th style="text-align: left; width: 150px;">${fieldName}</th>
-                    <th style="text-align: center; width: 100px;">Count</th>
-                    <th style="text-align: center; width: 100px;">Percentage</th>
-                    <th style="text-align: left;">Distribution</th>
+                    <th style="text-align: left; width: 150px; color: #feca57;">${fieldName}</th>
+                    <th style="text-align: center; width: 100px; color: #feca57;">Count</th>
+                    <th style="text-align: center; width: 100px; color: #feca57;">Percentage</th>
+                    <th style="text-align: left; color: #feca57;">Distribution</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -623,13 +758,13 @@ app.get('/', (req, res) => {
                     
                     return `
                       <tr>
-                        <td><strong>${label}</strong></td>
-                        <td style="text-align: center;">${count}</td>
-                        <td style="text-align: center;"><strong>${percentage}%</strong></td>
+                        <td><strong style="color: #fff;">${label}</strong></td>
+                        <td style="text-align: center; color: #fff;">${count}</td>
+                        <td style="text-align: center;"><strong style="color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};">${percentage}%</strong></td>
                         <td>
-                          <div style="background: #e0e0e0; border-radius: 5px; overflow: hidden; height: 25px; width: 100%; position: relative;">
-                            <div style="background: linear-gradient(90deg, #667eea, #764ba2); height: 100%; width: ${barWidth}%; transition: width 0.3s ease; display: flex; align-items: center; padding: 0 10px;">
-                              <span style="color: white; font-size: 0.85em; font-weight: 600;">${count}</span>
+                          <div style="background: rgba(255,255,255,0.1); border-radius: 5px; overflow: hidden; height: 25px; width: 100%; position: relative;">
+                            <div style="background: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; height: 100%; width: ${barWidth}%; transition: width 0.3s ease; display: flex; align-items: center; padding: 0 10px; box-shadow: 0 0 10px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.5)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.5)' : 'rgba(254, 202, 87, 0.5)'};">
+                              <span style="color: white; font-size: 0.85em; font-weight: 600; text-shadow: 0 0 5px rgba(0,0,0,0.5);">${count}</span>
                             </div>
                           </div>
                         </td>
@@ -644,8 +779,8 @@ app.get('/', (req, res) => {
       </div>
       
       <div class="data-table">
-        <h2 class="chart-title">📈 ${fieldName} Distribution Trends</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 20px;">Comparison across all months</p>
+        <h2 class="chart-title">${fieldName} Distribution Trends</h2>
+        <p style="text-align: center; color: #feca57; margin-bottom: 20px; letter-spacing: 1px;">Comparison across all months</p>
         
         <table>
           <thead>
@@ -680,13 +815,13 @@ app.get('/', (req, res) => {
                 <tr>
                   <td><strong>${month.name}</strong></td>
                   <td>${month.totalIssues}</td>
-                  <td>${noSP} <span style="color: #999;">(${((noSP/month.totalIssues)*100).toFixed(1)}%)</span></td>
-                  <td>${sp1} <span style="color: #999;">(${((sp1/month.totalIssues)*100).toFixed(1)}%)</span></td>
-                  <td>${sp2} <span style="color: #999;">(${((sp2/month.totalIssues)*100).toFixed(1)}%)</span></td>
-                  <td>${sp3} <span style="color: #999;">(${((sp3/month.totalIssues)*100).toFixed(1)}%)</span></td>
-                  <td>${sp5} <span style="color: #999;">(${((sp5/month.totalIssues)*100).toFixed(1)}%)</span></td>
-                  <td>${sp8} <span style="color: #999;">(${((sp8/month.totalIssues)*100).toFixed(1)}%)</span></td>
-                  <td>${sp13plus} <span style="color: #999;">(${((sp13plus/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${noSP} <span style="color: rgba(255,255,255,0.5);">(${((noSP/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${sp1} <span style="color: rgba(255,255,255,0.5);">(${((sp1/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${sp2} <span style="color: rgba(255,255,255,0.5);">(${((sp2/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${sp3} <span style="color: rgba(255,255,255,0.5);">(${((sp3/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${sp5} <span style="color: rgba(255,255,255,0.5);">(${((sp5/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${sp8} <span style="color: rgba(255,255,255,0.5);">(${((sp8/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${sp13plus} <span style="color: rgba(255,255,255,0.5);">(${((sp13plus/month.totalIssues)*100).toFixed(1)}%)</span></td>
                 </tr>
               `;
             }).join('')}
@@ -698,18 +833,18 @@ app.get('/', (req, res) => {
     <div id="averages" class="tab-content">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
         <div class="chart-container">
-          <h2 class="chart-title">📊 Average Effort Trend</h2>
+          <h2 class="chart-title">Average Effort Trend</h2>
           <canvas id="averageEffortChart"></canvas>
         </div>
         
         <div class="chart-container">
-          <h2 class="chart-title">🎯 Effort Distribution Pie</h2>
+          <h2 class="chart-title">Effort Distribution Pie</h2>
           <canvas id="effortPieChart"></canvas>
         </div>
       </div>
       
       <div class="data-table">
-        <h2 class="chart-title">📈 Effort Metrics by Month</h2>
+        <h2 class="chart-title">Effort Metrics by Month</h2>
         <table>
           <thead>
             <tr>
@@ -753,7 +888,7 @@ app.get('/', (req, res) => {
                 <tr>
                   <td><strong>${month.name}</strong></td>
                   <td>${month.totalIssues}</td>
-                  <td>${tasksWithSP} <span style="color: #999;">(${((tasksWithSP/month.totalIssues)*100).toFixed(1)}%)</span></td>
+                  <td>${tasksWithSP} <span style="color: rgba(255,255,255,0.5);">(${((tasksWithSP/month.totalIssues)*100).toFixed(1)}%)</span></td>
                   <td><strong style="color: ${avgColor}; font-size: 1.2em;">${avgEffort}</strong></td>
                   <td>${totalEffort.toLocaleString()} SP</td>
                   <td style="font-size: 0.9em;">${mostCommon}</td>
@@ -767,7 +902,7 @@ app.get('/', (req, res) => {
                 if (!m.distribution) return sum;
                 return sum + Object.entries(m.distribution).filter(([k]) => k !== 'null').reduce((s, [, v]) => s + v, 0);
               }, 0)}</td>
-              <td><strong style="color: #667eea; font-size: 1.2em;">${(
+              <td><strong style="color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; font-size: 1.2em; text-shadow: 0 0 5px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}">${(
                 filteredMonths.reduce((sum, m) => sum + calculateAverageEffort(m), 0) / filteredMonths.filter(m => m.distribution).length
               ).toFixed(2)}</strong></td>
               <td colspan="2"></td>
@@ -777,7 +912,7 @@ app.get('/', (req, res) => {
       </div>
       
       <div class="chart-container">
-        <h2 class="chart-title">📊 Stacked Effort Distribution</h2>
+        <h2 class="chart-title">Stacked Effort Distribution</h2>
         <canvas id="effortDistributionChart"></canvas>
       </div>
     </div>
@@ -816,17 +951,10 @@ app.get('/', (req, res) => {
         }).join('')}
       </div>
     </div>
-    
-    <div id="report" class="tab-content">
-      <div class="report-viewer">
-        <h2 class="chart-title">Full Text Report</h2>
-        <div class="report-content">${escapeHtml(loadTextReport())}</div>
-      </div>
-    </div>
   </div>
   
   <script>
-    function showTab(tabName) {
+    function showTab(tabName, event) {
       document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
       

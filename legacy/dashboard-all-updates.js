@@ -412,7 +412,7 @@ app.get('/', (req, res) => {
 <body>
   <div class="container">
     <div class="header">
-      <h1>📊 All Story Point Updates Dashboard</h1>
+      <h1>All Story Point Updates Dashboard</h1>
       <p>Analysis of Story Points increased from 1/2/3/5 to higher values (March 2025 - ${filteredMonths[filteredMonths.length - 1]?.name || 'Present'})</p>
       
       <div style="margin-top: 20px;">

@@ -32,8 +32,6 @@ const fetchAllPages = async (startDate, endDate, mode = 'dev') => {
     pageCount++;
     const url = `${config.jira.baseUrl}?jql=${encodeURIComponent(jql)}&fields=${customFieldId}&expand=changelog&maxResults=100${nextPageToken ? `&nextPageToken=${encodeURIComponent(nextPageToken)}` : ''}`;
 
-    console.log(`  Fetching page ${pageCount} (${mode.toUpperCase()} mode)...`);
-
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -44,19 +42,13 @@ const fetchAllPages = async (startDate, endDate, mode = 'dev') => {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error(`  API Error Response:`, errorText);
       throw new Error(`HTTP error! status: ${response.status} - ${errorText}`);
     }
 
     const data = await response.json();
-    console.log(`  Response keys:`, Object.keys(data));
-    console.log(`  Issues count: ${data.issues?.length || 0}`);
-    console.log(`  isLast: ${data.isLast}`);
-    console.log(`  nextPageToken: ${data.nextPageToken || 'none'}`);
     
     if (data.issues?.length > 0) {
       allIssues.push(...data.issues);
-      console.log(`  Total accumulated: ${allIssues.length}`);
     }
 
     if (data.isLast) break;

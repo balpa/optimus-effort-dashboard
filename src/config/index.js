@@ -9,13 +9,18 @@ module.exports = {
     modes: {
       dev: {
         issueTypes: ['Web Service (OPT)', 'Experiment (OPT)', 'Personalization (OPT)'],
-        customFieldId: 'customfield_10008', // Story Points
+        customFieldId: 'customfield_10008',
         fieldName: 'Story Points'
       },
       qa: {
         issueTypes: ['QA (OPT)'],
-        customFieldId: 'customfield_14664', // QA Efforts
-        fieldName: 'QA Efforts'
+        customFieldId: 'customfield_14664',
+        fieldName: 'QA Task Efforts'
+      },
+      'qa-board': {
+        issueTypes: ['Web Service (OPT)', 'Experiment (OPT)', 'Personalization (OPT)'],
+        customFieldId: 'customfield_14664',
+        fieldName: 'Board Task QA Efforts'
       }
     }
   },
@@ -41,7 +46,8 @@ module.exports = {
     devReport: './data/story-point-all-updates-report.txt',
     qaData: './data/qa-efforts-all-updates-data.json',
     qaReport: './data/qa-efforts-all-updates-report.txt',
-    // Legacy paths (for backward compatibility)
+    qaBoardData: './data/qa-board-all-updates-data.json',
+    qaBoardReport: './data/qa-board-all-updates-report.txt',
     allUpdatesData: './data/story-point-all-updates-data.json',
     allUpdatesReport: './data/story-point-all-updates-report.txt',
     legacyData: './data/story-point-2-to-higher-data.json',
