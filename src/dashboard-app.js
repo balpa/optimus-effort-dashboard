@@ -693,10 +693,10 @@ app.get('/', (req, res) => {
     <div class="direction-toggle">
       <span>Direction:</span>
       <a href="/?mode=${mode}&direction=up${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${direction === 'up' ? 'active' : ''}">
-        ⬆️ Increased
+        Increased
       </a>
       <a href="/?mode=${mode}&direction=down${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${direction === 'down' ? 'active' : ''}">
-        ⬇️ Decreased
+        Decreased
       </a>
     </div>
     
