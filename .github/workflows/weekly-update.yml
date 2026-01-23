@@ -2,10 +2,10 @@ name: Weekly Data Update
 
 on:
   schedule:
-    # Her Pazartesi saat 09:00 UTC (Türkiye saati 12:00)
     - cron: '0 9 * * 1'
+    - cron: '0 9 * * 3'
+    - cron: '0 9 * * 5'
   
-  # Manuel tetikleme için
   workflow_dispatch:
 
 jobs:
@@ -42,7 +42,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/*.json data/*.txt
-          git diff --staged --quiet || git commit -m "🤖 Weekly data update - $(date +'%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "🤖 Data update (Mon/Wed/Fri) - $(date +'%Y-%m-%d %H:%M')"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,8 +51,8 @@ jobs:
         if: always()
         run: |
           if [ ${{ job.status }} == 'success' ]; then
-            echo "✅ Weekly update completed successfully"
+            echo "Data update completed successfully (Mon/Wed/Fri schedule)"
           else
-            echo "❌ Weekly update failed"
+            echo "Data update failed"
             exit 1
           fi
