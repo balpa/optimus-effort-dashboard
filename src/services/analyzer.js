@@ -1,6 +1,6 @@
 const config = require('../config');
 
-const analyzeEffortChanges = (issues, basePoints = config.analysis.basePoints, mode = 'dev') => {
+const analyzeEffortChanges = (issues, basePoints = config.analysis.basePoints, mode = 'dev', direction = 'up') => {
   const { modes } = config.jira;
   const modeConfig = modes[mode];
   
@@ -22,7 +22,12 @@ const analyzeEffortChanges = (issues, basePoints = config.analysis.basePoints, m
           const fromValue = parseFloat(item.fromString);
           const toValue = parseFloat(item.toString);
           
-          if (basePoints.includes(fromValue) && toValue > fromValue) {
+          // Check if fromValue is in basePoints and matches direction
+          const isValidChange = direction === 'up' 
+            ? (basePoints.includes(fromValue) && toValue > fromValue)
+            : (basePoints.includes(fromValue) && toValue < fromValue);
+          
+          if (isValidChange) {
             acc.push({
               key,
               from: fromValue,

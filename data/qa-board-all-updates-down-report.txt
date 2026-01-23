@@ -1,0 +1,166 @@
+QA Efforts ANALYSIS - ALL MONTHS (QA Board Task - Decreases)
+================================================================================
+Analysis Period: March 2025 - Present
+Tracking QA Efforts decreases from base points: 1, 2, 3, 5, 8, 13, 17, 21, 34
+
+
+March 2025
+--------------------------------------------------------------------------------
+Total Issues: 742
+QA Efforts Decreases: 11
+Update Rate: 1.48%
+
+Decreases by Transition:
+  2 → 1: 1 issues
+  3 → 2: 3 issues
+  5 → 1: 1 issues
+  5 → 3: 4 issues
+  8 → 3: 1 issues
+  13 → 5: 1 issues
+
+April 2025
+--------------------------------------------------------------------------------
+Total Issues: 742
+QA Efforts Decreases: 6
+Update Rate: 0.81%
+
+Decreases by Transition:
+  3 → 2: 1 issues
+  5 → 1: 2 issues
+  5 → 2: 1 issues
+  5 → 3: 1 issues
+  13 → 8: 1 issues
+
+May 2025
+--------------------------------------------------------------------------------
+Total Issues: 830
+QA Efforts Decreases: 25
+Update Rate: 3.01%
+
+Decreases by Transition:
+  2 → 1: 3 issues
+  3 → 1: 4 issues
+  3 → 2: 1 issues
+  5 → 1: 1 issues
+  5 → 2: 1 issues
+  5 → 3: 14 issues
+  8 → 3: 1 issues
+
+June 2025
+--------------------------------------------------------------------------------
+Total Issues: 656
+QA Efforts Decreases: 6
+Update Rate: 0.91%
+
+Decreases by Transition:
+  2 → 1: 1 issues
+  3 → 1: 1 issues
+  3 → 2: 2 issues
+  13 → 5: 1 issues
+  21 → 13: 1 issues
+
+July 2025
+--------------------------------------------------------------------------------
+Total Issues: 729
+QA Efforts Decreases: 9
+Update Rate: 1.23%
+
+Decreases by Transition:
+  2 → 1: 1 issues
+  3 → 1: 1 issues
+  3 → 2: 1 issues
+  5 → 2: 1 issues
+  5 → 3: 3 issues
+  13 → 8: 2 issues
+
+August 2025
+--------------------------------------------------------------------------------
+Total Issues: 741
+QA Efforts Decreases: 7
+Update Rate: 0.94%
+
+Decreases by Transition:
+  3 → 0: 1 issues
+  3 → 1: 1 issues
+  5 → 2: 1 issues
+  5 → 3: 1 issues
+  8 → 3: 1 issues
+  8 → 5: 1 issues
+  13 → 8: 1 issues
+
+September 2025
+--------------------------------------------------------------------------------
+Total Issues: 747
+QA Efforts Decreases: 8
+Update Rate: 1.07%
+
+Decreases by Transition:
+  2 → 1: 1 issues
+  3 → 1: 1 issues
+  3 → 2: 3 issues
+  5 → 0: 1 issues
+  5 → 3: 1 issues
+  8 → 5: 1 issues
+
+October 2025
+--------------------------------------------------------------------------------
+Total Issues: 809
+QA Efforts Decreases: 11
+Update Rate: 1.36%
+
+Decreases by Transition:
+  2 → 1: 1 issues
+  3 → 2: 1 issues
+  5 → 0: 1 issues
+  5 → 2: 2 issues
+  5 → 3: 3 issues
+  8 → 5: 2 issues
+  13 → 8: 1 issues
+
+November 2025
+--------------------------------------------------------------------------------
+Total Issues: 738
+QA Efforts Decreases: 16
+Update Rate: 2.17%
+
+Decreases by Transition:
+  2 → 1: 2 issues
+  3 → 1: 1 issues
+  3 → 2: 1 issues
+  5 → 1: 1 issues
+  5 → 3: 2 issues
+  8 → 5: 8 issues
+  13 → 8: 1 issues
+
+December 2025
+--------------------------------------------------------------------------------
+Total Issues: 678
+QA Efforts Decreases: 10
+Update Rate: 1.47%
+
+Decreases by Transition:
+  2 → 1: 3 issues
+  3 → 1: 1 issues
+  5 → 3: 2 issues
+  8 → 5: 2 issues
+  13 → 2: 1 issues
+  13 → 3: 1 issues
+
+January 2026
+--------------------------------------------------------------------------------
+Total Issues: 312
+QA Efforts Decreases: 4
+Update Rate: 1.28%
+
+Decreases by Transition:
+  1 → 0: 1 issues
+  3 → 1: 1 issues
+  3 → 2: 1 issues
+  5 → 3: 1 issues
+
+
+SUMMARY - ALL MONTHS
+================================================================================
+Total Issues Analyzed: 7724
+Total QA Efforts Decreases: 113
+Overall Update Rate: 1.46%

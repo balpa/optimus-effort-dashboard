@@ -12,43 +12,62 @@ const app = express();
 
 const PROJECT_ROOT = path.join(__dirname, '..');
 
-const loadData = (mode = 'dev') => {
+const loadData = (mode = 'dev', direction = 'up') => {
   const jsonPath = mode === 'dev' ? 
-    path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-data.json') : 
+    (direction === 'up' ? 
+      path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-up-data.json') :
+      path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-down-data.json')
+    ) : 
     mode === 'qa' ?
-    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-data.json') :
-    path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-data.json');
+    (direction === 'up' ?
+      path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-up-data.json') :
+      path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-down-data.json')
+    ) :
+    (direction === 'up' ?
+      path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-up-data.json') :
+      path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-down-data.json')
+    );
   
   return fs.existsSync(jsonPath) ? JSON.parse(fs.readFileSync(jsonPath, 'utf8')) : null;
 };
 
-const loadTextReport = (mode = 'dev') => {
+const loadTextReport = (mode = 'dev', direction = 'up') => {
   const reportPath = mode === 'dev' ? 
-    path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-report.txt') : 
+    (direction === 'up' ?
+      path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-up-report.txt') :
+      path.join(PROJECT_ROOT, 'data', 'story-point-all-updates-down-report.txt')
+    ) : 
     mode === 'qa' ?
-    path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-report.txt') :
-    path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-report.txt');
+    (direction === 'up' ?
+      path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-up-report.txt') :
+      path.join(PROJECT_ROOT, 'data', 'qa-efforts-all-updates-down-report.txt')
+    ) :
+    (direction === 'up' ?
+      path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-up-report.txt') :
+      path.join(PROJECT_ROOT, 'data', 'qa-board-all-updates-down-report.txt')
+    );
   return fs.existsSync(reportPath) ? fs.readFileSync(reportPath, 'utf8') : '';
 };
 
 app.get('/', (req, res) => {
   const mode = req.query.mode || 'dev';
+  const direction = req.query.direction || 'up';
   const modeConfig = config.jira.modes[mode];
   
   if (!modeConfig) {
     return res.send(`<h1>Invalid mode: ${mode}. Valid modes are: dev, qa</h1>`);
   }
   
-  const data = loadData(mode);
+  const data = loadData(mode, direction);
   
   if (!data) {
-    return res.send(`<h1>No data found for ${mode.toUpperCase()} mode. Please run analyze-all${mode === 'qa' ? '-qa' : ''}.js first.</h1>`);
+    return res.send(`<h1>No data found for ${mode.toUpperCase()} mode with direction: ${direction}. Please run analyze-all${mode === 'qa' ? '-qa' : ''}.js first.</h1>`);
   }
 
 
   const selectedBase = req.query.base ? parseInt(req.query.base) : null;
   const months = Object.entries(data).map(([key, value]) => ({ key, ...value }));
-  const BASE_POINTS = config.analysis.basePoints;
+  const BASE_POINTS = modeConfig.basePoints || config.analysis.basePoints;
   const fieldName = modeConfig.fieldName;
   
   const allTransitions = new Set();
@@ -241,6 +260,62 @@ app.get('/', (req, res) => {
     }
     
     .mode-toggle a:not(.active):hover {
+      background: #ffffff10;
+      color: #fff;
+      border-color: #ffffff60;
+      transform: translateY(-2px);
+    }
+    
+    .direction-toggle {
+      background: #16213e;
+      padding: 15px 30px;
+      border-radius: 20px;
+      box-shadow: 
+        0 0 20px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.5)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.5)' : 'rgba(254, 202, 87, 0.5)'},
+        inset 0 0 20px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      border: 2px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+    }
+    
+    .direction-toggle span {
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', sans-serif;
+      color: #feca57;
+    }
+    
+    .direction-toggle a {
+      padding: 12px 30px;
+      border-radius: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    
+    .direction-toggle a.active {
+      background: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'};
+      color: #1a1a2e;
+      box-shadow: 
+        0 0 30px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.8)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.8)' : 'rgba(254, 202, 87, 0.8)'},
+        0 0 60px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.4)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.4)' : 'rgba(254, 202, 87, 0.4)'};
+    }
+    
+    .direction-toggle a:not(.active) {
+      background: transparent;
+      color: #ffffff80;
+      border: 2px solid #ffffff30;
+    }
+    
+    .direction-toggle a:not(.active):hover {
       background: #ffffff10;
       color: #fff;
       border-color: #ffffff60;
@@ -604,29 +679,36 @@ app.get('/', (req, res) => {
 <body>
   <div class="container">
     <div class="mode-toggle">
-      <a href="/?mode=dev${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'dev' ? 'active' : ''}">
+      <a href="/?mode=dev&direction=${direction}${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'dev' ? 'active' : ''}">
         DEV (Story Points)
       </a>
-      <a href="/?mode=qa${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'qa' ? 'active' : ''}">
+      <a href="/?mode=qa&direction=${direction}${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'qa' ? 'active' : ''}">
         QA (QA Task)
       </a>
-      <a href="/?mode=qa-board${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'qa-board' ? 'active' : ''}">
+      <a href="/?mode=qa-board&direction=${direction}${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${mode === 'qa-board' ? 'active' : ''}">
         QA (Board Task)
+      </a>
+    </div>
+    
+    <div class="direction-toggle">
+      <span>Direction:</span>
+      <a href="/?mode=${mode}&direction=up${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${direction === 'up' ? 'active' : ''}">
+        ⬆️ Increased
+      </a>
+      <a href="/?mode=${mode}&direction=down${selectedBase !== null ? '&base=' + selectedBase : ''}" class="${direction === 'down' ? 'active' : ''}">
+        ⬇️ Decreased
       </a>
     </div>
     
     <div class="header">
       <h1>${fieldName} Update Dashboard</h1>
-      <p>Analysis of ${fieldName} increased from 1/2/3/5 to higher values (March 2025 - ${filteredMonths[filteredMonths.length - 1]?.name || 'Present'})</p>
+      <p>Analysis of ${fieldName} ${direction === 'up' ? 'increased' : 'decreased'} from ${BASE_POINTS.join('/')} to ${direction === 'up' ? 'higher' : 'lower'} values (March 2025 - ${filteredMonths[filteredMonths.length - 1]?.name || 'Present'})</p>
       
       <div style="margin-top: 25px; position: relative; z-index: 1;">
         <label style="font-size: 1.1em; color: #feca57; margin-right: 15px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Bebas Neue', sans-serif;">Filter by Base ${fieldName}:</label>
-        <select onchange="window.location.href='/?mode=${mode}&base='+this.value" style="padding: 12px 25px; font-size: 1.1em; border-radius: 10px; border: 2px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; background: #16213e; color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; cursor: pointer; font-family: 'Staatliches', sans-serif; letter-spacing: 1px; box-shadow: 0 0 15px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.6)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.6)' : 'rgba(254, 202, 87, 0.6)'}'" onmouseout="this.style.boxShadow='0 0 15px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}'">
-          <option value="" style="background: #16213e; color: #fff;">All (1, 2, 3, 5)</option>
-          <option value="1" ${selectedBase === 1 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 1</option>
-          <option value="2" ${selectedBase === 2 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 2</option>
-          <option value="3" ${selectedBase === 3 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 3</option>
-          <option value="5" ${selectedBase === 5 ? 'selected' : ''} style="background: #16213e; color: #fff;">From 5</option>
+        <select onchange="window.location.href='/?mode=${mode}&direction=${direction}&base='+this.value" style="padding: 12px 25px; font-size: 1.1em; border-radius: 10px; border: 2px solid ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; background: #16213e; color: ${mode === 'dev' ? '#ff4757' : mode === 'qa' ? '#00ffff' : '#feca57'}; cursor: pointer; font-family: 'Staatliches', sans-serif; letter-spacing: 1px; box-shadow: 0 0 15px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 0 25px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.6)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.6)' : 'rgba(254, 202, 87, 0.6)'}'" onmouseout="this.style.boxShadow='0 0 15px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.3)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.3)' : 'rgba(254, 202, 87, 0.3)'}'">
+          <option value="" style="background: #16213e; color: #fff;">All (${BASE_POINTS.join(', ')})</option>
+          ${BASE_POINTS.map(bp => `<option value="${bp}" ${selectedBase === bp ? 'selected' : ''} style="background: #16213e; color: #fff;">From ${bp}</option>`).join('\n          ')}
         </select>
       </div>
     </div>
@@ -1259,3 +1341,16 @@ app.get('/', (req, res) => {
 
 // Export the Express app for Vercel serverless
 module.exports = app;
+
+// Start server if running locally (not in Vercel)
+if (require.main === module) {
+  const PORT = config.dashboard.port;
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Dashboard server is running!`);
+    console.log(`📊 Open http://localhost:${PORT} in your browser\n`);
+    console.log(`Available modes:`);
+    console.log(`  - Dev (Story Points): http://localhost:${PORT}/?mode=dev`);
+    console.log(`  - QA (QA Efforts): http://localhost:${PORT}/?mode=qa`);
+    console.log(`  - QA Board (QA Efforts): http://localhost:${PORT}/?mode=qa-board\n`);
+  });
+}

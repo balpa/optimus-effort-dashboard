@@ -5,12 +5,13 @@ const jiraService = require('./services/jira');
 const analyzer = require('./services/analyzer');
 const { generateMonths } = require('./utils/date');
 
-const main = async () => {
+const main = async (direction = 'up') => {
   const mode = 'qa-board';
-  const { fieldName } = config.jira.modes[mode];
-  const dataPath = config.paths.qaBoardData;
-  const reportPath = config.paths.qaBoardReport;
-  const BASE_POINTS = config.analysis.basePoints;
+  const modeConfig = config.jira.modes[mode];
+  const { fieldName } = modeConfig;
+  const dataPath = direction === 'up' ? config.paths.qaBoardDataUp : config.paths.qaBoardDataDown;
+  const reportPath = direction === 'up' ? config.paths.qaBoardReportUp : config.paths.qaBoardReportDown;
+  const BASE_POINTS = modeConfig.basePoints || config.analysis.basePoints;
 
   const allMonthsData = {};
   let reportLines = [];
@@ -20,7 +21,7 @@ const main = async () => {
   const months = generateMonths(config.analysis.startDate);
   const MONTHS = Object.entries(months).map(([key, value]) => ({ key, ...value }));
 
-  console.log(`\n🚀 Starting QA Board (${fieldName}) Analysis`);
+  console.log(`\n🚀 Starting QA Board (${fieldName}) Analysis - ${direction === 'up' ? 'Increases' : 'Decreases'}`);
   console.log(`📅 Period: ${config.analysis.startDate} - Present`);
   console.log(`📊 Total months to analyze: ${MONTHS.length}\n`);
 
@@ -30,7 +31,7 @@ const main = async () => {
     try {
       const issues = await jiraService.fetchAllPages(monthData.start, monthData.end, mode);
       
-      const changes = analyzer.analyzeEffortChanges(issues, BASE_POINTS, mode);
+      const changes = analyzer.analyzeEffortChanges(issues, BASE_POINTS, mode, direction);
       const distribution = analyzer.analyzeEffortDistribution(issues, mode);
       const byBaseAndTarget = analyzer.groupChangesByBaseAndTarget(changes);
       
@@ -49,7 +50,7 @@ const main = async () => {
       totalChanges += changes.length;
 
       console.log(`   ✅ Found ${issues.length} issues`);
-      console.log(`   📈 ${fieldName} increases: ${changes.length}`);
+      console.log(`   📈 ${fieldName} ${direction === 'up' ? 'increases' : 'decreases'}: ${changes.length}`);
       console.log(`   📊 Update rate: ${((changes.length / issues.length) * 100).toFixed(2)}%`);
       
       if (changes.length > 0) {
@@ -65,11 +66,11 @@ const main = async () => {
       reportLines.push(`\n${monthData.name}`);
       reportLines.push('-'.repeat(80));
       reportLines.push(`Total Issues: ${issues.length}`);
-      reportLines.push(`${fieldName} Increases: ${changes.length}`);
+      reportLines.push(`${fieldName} ${direction === 'up' ? 'Increases' : 'Decreases'}: ${changes.length}`);
       reportLines.push(`Update Rate: ${((changes.length / issues.length) * 100).toFixed(2)}%`);
       
       if (changes.length > 0) {
-        reportLines.push(`\nIncreases by Transition:`);
+        reportLines.push(`\n${direction === 'up' ? 'Increases' : 'Decreases'} by Transition:`);
         BASE_POINTS.forEach(base => {
           const targets = byBaseAndTarget[base] || {};
           Object.entries(targets).forEach(([target, count]) => {
@@ -87,22 +88,22 @@ const main = async () => {
   }
 
   reportLines.unshift('');
-  reportLines.unshift(`Tracking ${fieldName} increases from base points: ${BASE_POINTS.join(', ')}`);
+  reportLines.unshift(`Tracking ${fieldName} ${direction === 'up' ? 'increases' : 'decreases'} from base points: ${BASE_POINTS.join(', ')}`);
   reportLines.unshift(`Analysis Period: March 2025 - Present`);
   reportLines.unshift('='.repeat(80));
-  reportLines.unshift(`${fieldName} ANALYSIS - ALL MONTHS (QA Board Task)`);
+  reportLines.unshift(`${fieldName} ANALYSIS - ALL MONTHS (QA Board Task - ${direction === 'up' ? 'Increases' : 'Decreases'})`);
 
   reportLines.push('\n\nSUMMARY - ALL MONTHS');
   reportLines.push('='.repeat(80));
   reportLines.push(`Total Issues Analyzed: ${totalIssues}`);
-  reportLines.push(`Total ${fieldName} Increases: ${totalChanges}`);
+  reportLines.push(`Total ${fieldName} ${direction === 'up' ? 'Increases' : 'Decreases'}: ${totalChanges}`);
   reportLines.push(`Overall Update Rate: ${((totalChanges / totalIssues) * 100).toFixed(2)}%`);
 
   console.log(`\n${'='.repeat(60)}`);
-  console.log(`📊 SUMMARY - QA BOARD ANALYSIS COMPLETE`);
+  console.log(`📊 SUMMARY - QA BOARD ANALYSIS COMPLETE (${direction === 'up' ? 'Increases' : 'Decreases'})`);
   console.log(`${'='.repeat(60)}`);
   console.log(`📝 Total Issues Analyzed: ${totalIssues.toLocaleString()}`);
-  console.log(`📈 Total ${fieldName} Increases: ${totalChanges.toLocaleString()}`);
+  console.log(`📈 Total ${fieldName} ${direction === 'up' ? 'Increases' : 'Decreases'}: ${totalChanges.toLocaleString()}`);
   console.log(`📉 Overall Update Rate: ${((totalChanges / totalIssues) * 100).toFixed(2)}%`);
   console.log(`${'='.repeat(60)}\n`);
 
@@ -119,4 +120,13 @@ const main = async () => {
   console.log(`📄 Report saved to: ${path.basename(reportPath)}\n`);
 };
 
-main().catch(console.error);
+// Run for both directions
+(async () => {
+  try {
+    await main('up');
+    console.log('\n\n' + '='.repeat(80) + '\n');
+    await main('down');
+  } catch (error) {
+    console.error(error);
+  }
+})();

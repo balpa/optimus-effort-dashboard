@@ -8,19 +8,20 @@ const { generateMonths } = require('./utils/date');
 const MODE = 'qa';
 const modeConfig = config.jira.modes[MODE];
 const fieldName = modeConfig.fieldName;
+const BASE_POINTS = modeConfig.basePoints || config.analysis.basePoints;
 
-const formatResults = (monthName, issueCount, changes) => {
+const formatResults = (monthName, issueCount, changes, direction = 'up') => {
   let output = `\n${'='.repeat(60)}\n${monthName}\n${'='.repeat(60)}\n`;
   output += `Total Issues: ${issueCount}\n`;
-  output += `Total ${fieldName} Increases: ${changes.length}\n\n`;
+  output += `Total ${fieldName} ${direction === 'up' ? 'Increases' : 'Decreases'}: ${changes.length}\n\n`;
 
   if (changes.length > 0) {
-    const grouped = config.analysis.basePoints.reduce((acc, base) => {
+    const grouped = BASE_POINTS.reduce((acc, base) => {
       acc[base] = changes.filter(c => c.from === base);
       return acc;
     }, {});
 
-    config.analysis.basePoints.forEach(base => {
+    BASE_POINTS.forEach(base => {
       const baseChanges = grouped[base];
       if (baseChanges.length > 0) {
         output += `From ${base} points (${baseChanges.length} changes):\n`;
@@ -42,19 +43,20 @@ const formatResults = (monthName, issueCount, changes) => {
   return output;
 };
 
-const main = async () => {
-  console.log(`\n📊 Starting comprehensive ${fieldName} analysis (QA mode)...\n`);
+const main = async (direction = 'up') => {
+  console.log(`\n📊 Starting comprehensive ${fieldName} analysis (QA mode - ${direction === 'up' ? 'increases' : 'decreases'})...\n`);
 
   const MONTHS = generateMonths(config.analysis.startDate);
   const monthlyStats = {};
-  let fullOutput = `${fieldName} Analysis Report (QA tasks - 1→higher, 2→higher, 3→higher, 5→higher)\nGenerated: ${new Date().toISOString()}\n`;
+  const basePointsStr = BASE_POINTS.join('/');
+  let fullOutput = `${fieldName} Analysis Report (QA tasks - ${basePointsStr}→${direction === 'up' ? 'higher' : 'lower'})\nGenerated: ${new Date().toISOString()}\n`;
 
   for (const [monthKey, monthData] of Object.entries(MONTHS)) {
     console.log(`\nProcessing ${monthData.name}...`);
     
     try {
       const issues = await jiraService.fetchAllPages(monthData.start, monthData.end, MODE);
-      const changes = analyzer.analyzeEffortChanges(issues, config.analysis.basePoints, MODE);
+      const changes = analyzer.analyzeEffortChanges(issues, BASE_POINTS, MODE, direction);
       const distribution = analyzer.analyzeEffortDistribution(issues, MODE);
       const byBaseAndTarget = analyzer.groupChangesByBaseAndTarget(changes);
 
@@ -67,9 +69,9 @@ const main = async () => {
         keys: changes.map(({ key, from, to }) => ({ key, from, to }))
       };
 
-      fullOutput += formatResults(monthData.name, issues.length, changes);
+      fullOutput += formatResults(monthData.name, issues.length, changes, direction);
       
-      console.log(`  ✓ ${monthData.name}: ${issues.length} issues, ${changes.length} ${fieldName} increases`);
+      console.log(`  ✓ ${monthData.name}: ${issues.length} issues, ${changes.length} ${fieldName} ${direction === 'up' ? 'increases' : 'decreases'}`);
     } catch (error) {
       console.error(`  ✗ Error processing ${monthData.name}:`, error.message);
       fullOutput += `\n${monthData.name}: ERROR - ${error.message}\n`;
@@ -96,7 +98,7 @@ const main = async () => {
     
     fullOutput += `\n  ${fieldName} Changes:\n`;
     fullOutput += `  Total Changes: ${stats.totalChanges}\n`;
-    config.analysis.basePoints.forEach(base => {
+    BASE_POINTS.forEach(base => {
       const targets = stats.byBaseAndTarget[base];
       const totalForBase = Object.values(targets).reduce((sum, count) => sum + count, 0);
       if (totalForBase > 0) {
@@ -129,8 +131,12 @@ const main = async () => {
   const overallAvg = allAverages.reduce((sum, avg) => sum + avg, 0) / allAverages.length;
   fullOutput += `Overall Average ${fieldName}: ${overallAvg.toFixed(2)}\n`;
 
-  const dataPath = path.resolve(config.paths.qaData);
-  const reportPath = path.resolve(config.paths.qaReport);
+  const dataPath = direction === 'up' 
+    ? path.resolve(config.paths.qaDataUp) 
+    : path.resolve(config.paths.qaDataDown);
+  const reportPath = direction === 'up' 
+    ? path.resolve(config.paths.qaReportUp) 
+    : path.resolve(config.paths.qaReportDown);
 
   const dataDir = path.dirname(dataPath);
   if (!fs.existsSync(dataDir)) {
@@ -144,7 +150,16 @@ const main = async () => {
   console.log(`   Data saved to: ${path.basename(dataPath)}`);
   console.log(`   Report saved to: ${path.basename(reportPath)}`);
   console.log(`   Total Issues: ${totalIssues}`);
-  console.log(`   Total ${fieldName} Increases: ${totalChanges}\n`);
+  console.log(`   Total ${fieldName} ${direction === 'up' ? 'Increases' : 'Decreases'}: ${totalChanges}\n`);
 };
 
-main().catch(console.error);
+// Run for both directions
+(async () => {
+  try {
+    await main('up');
+    console.log('\n\n' + '='.repeat(80) + '\n');
+    await main('down');
+  } catch (error) {
+    console.error(error);
+  }
+})();
