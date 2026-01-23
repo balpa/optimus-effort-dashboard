@@ -674,6 +674,143 @@ app.get('/', (req, res) => {
         0 0 20px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.8)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.8)' : 'rgba(254, 202, 87, 0.8)'},
         0 0 40px ${mode === 'dev' ? 'rgba(255, 71, 87, 0.5)' : mode === 'qa' ? 'rgba(0, 255, 255, 0.5)' : 'rgba(254, 202, 87, 0.5)'};
     }
+
+    /* Responsive Design - Tablet */
+    @media (max-width: 1024px) {
+      .container {
+        max-width: 100%;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 2.8em;
+      }
+
+      .mode-toggle, .direction-toggle {
+        gap: 10px;
+      }
+
+      .mode-toggle button, .direction-toggle button {
+        padding: 12px 24px;
+        font-size: 1.1em;
+      }
+
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Responsive Design - Mobile */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+        margin: 10px;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .mode-toggle, .direction-toggle {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 15px;
+      }
+
+      .mode-toggle button, .direction-toggle button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1em;
+      }
+
+      .stats-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .stat-card {
+        padding: 15px;
+      }
+
+      .stat-value {
+        font-size: 2em;
+      }
+
+      .stat-label {
+        font-size: 0.9em;
+      }
+
+      .controls {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .controls label {
+        width: 100%;
+      }
+
+      .controls select {
+        width: 100%;
+        font-size: 0.9em;
+        padding: 8px;
+      }
+
+      .chart-container {
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      canvas {
+        max-height: 250px !important;
+      }
+
+      .issue-key {
+        padding: 6px 12px;
+        font-size: 0.8em;
+      }
+
+      table {
+        font-size: 0.85em;
+      }
+
+      th, td {
+        padding: 8px 4px;
+      }
+    }
+
+    /* Responsive Design - Small Mobile */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6em;
+      }
+
+      .stat-value {
+        font-size: 1.8em;
+      }
+
+      .stat-label {
+        font-size: 0.8em;
+      }
+
+      canvas {
+        max-height: 200px !important;
+      }
+
+      table {
+        font-size: 0.75em;
+      }
+
+      th, td {
+        padding: 6px 2px;
+      }
+
+      .issue-key {
+        padding: 4px 8px;
+        font-size: 0.7em;
+      }
+    }
   </style>
 </head>
 <body>
