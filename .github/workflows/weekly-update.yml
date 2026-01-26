@@ -41,7 +41,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/*.json data/*.txt
+          git add -f data/*.json data/*.txt
           git diff --staged --quiet || git commit -m "🤖 Data update (Mon/Wed/Fri) - $(date +'%Y-%m-%d %H:%M')"
           git push
         env:
@@ -50,9 +50,9 @@ jobs:
       - name: Update status
         if: always()
         run: |
-          if [ ${{ job.status }} == 'success' ]; then
-            echo "Data update completed successfully (Mon/Wed/Fri schedule)"
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "✅ Data update completed successfully (Mon/Wed/Fri schedule)"
           else
-            echo "Data update failed"
+            echo "❌ Data update failed"
             exit 1
           fi
