@@ -41,35 +41,29 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Force add all data files
-          git add -f data/qa-board-all-updates-up-data.json data/qa-board-all-updates-up-report.txt || true
-          git add -f data/qa-board-all-updates-down-data.json data/qa-board-all-updates-down-report.txt || true
-          git add -f data/qa-efforts-all-updates-up-data.json data/qa-efforts-all-updates-up-report.txt || true
-          git add -f data/qa-efforts-all-updates-down-data.json data/qa-efforts-all-updates-down-report.txt || true
-          git add -f data/story-point-all-updates-up-data.json data/story-point-all-updates-up-report.txt || true
-          git add -f data/story-point-all-updates-down-data.json data/story-point-all-updates-down-report.txt || true
+          # Disable global gitignore
+          git config --local core.excludesFile /dev/null
           
-          # Legacy files (if they exist)
-          git add -f data/qa-board-all-updates-data.json data/qa-board-all-updates-report.txt || true
-          git add -f data/qa-efforts-all-updates-data.json data/qa-efforts-all-updates-report.txt || true
-          git add -f data/story-point-all-updates-data.json data/story-point-all-updates-report.txt || true
+          # List files to be added
+          echo "Files to be added:"
+          ls -la data/*.json data/*.txt 2>/dev/null || echo "No files found"
+          
+          # Force add all data files using find
+          find data -type f \( -name "*.json" -o -name "*.txt" \) | while read file; do
+            echo "Adding: $file"
+            git add -f "$file" || echo "Failed to add $file"
+          done
+          
+          # Show what's staged
+          echo "Staged files:"
+          git diff --staged --name-only
           
           # Commit if there are changes
           if ! git diff --staged --quiet; then
-            git commit -m "🤖 Data update (Tue/Thu) - $(date +'%Y-%m-%d %H:%M')"
+            git commit -m "Data update (Tue/Thu) - $(date +'%Y-%m-%d %H:%M')"
             git push
           else
             echo "No changes to commit"
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Update status
-        if: always()
-        run: |
-          if [ "${{ job.status }}" == "success" ]; then
-            echo "✅ Data update completed successfully (Tue/Thu schedule)"
-          else
-            echo "❌ Data update failed"
-            exit 1
-          fi
