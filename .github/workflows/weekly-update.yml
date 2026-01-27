@@ -2,9 +2,8 @@ name: Weekly Data Update
 
 on:
   schedule:
-    - cron: '0 9 * * 1'
-    - cron: '0 9 * * 3'
-    - cron: '0 9 * * 5'
+    - cron: '0 9 * * 2'
+    - cron: '0 9 * * 4'
   
   workflow_dispatch:
 
@@ -41,9 +40,27 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add -f data/*.json data/*.txt
-          git diff --staged --quiet || git commit -m "🤖 Data update (Mon/Wed/Fri) - $(date +'%Y-%m-%d %H:%M')"
-          git push
+          
+          # Force add all data files
+          git add -f data/qa-board-all-updates-up-data.json data/qa-board-all-updates-up-report.txt || true
+          git add -f data/qa-board-all-updates-down-data.json data/qa-board-all-updates-down-report.txt || true
+          git add -f data/qa-efforts-all-updates-up-data.json data/qa-efforts-all-updates-up-report.txt || true
+          git add -f data/qa-efforts-all-updates-down-data.json data/qa-efforts-all-updates-down-report.txt || true
+          git add -f data/story-point-all-updates-up-data.json data/story-point-all-updates-up-report.txt || true
+          git add -f data/story-point-all-updates-down-data.json data/story-point-all-updates-down-report.txt || true
+          
+          # Legacy files (if they exist)
+          git add -f data/qa-board-all-updates-data.json data/qa-board-all-updates-report.txt || true
+          git add -f data/qa-efforts-all-updates-data.json data/qa-efforts-all-updates-report.txt || true
+          git add -f data/story-point-all-updates-data.json data/story-point-all-updates-report.txt || true
+          
+          # Commit if there are changes
+          if ! git diff --staged --quiet; then
+            git commit -m "🤖 Data update (Tue/Thu) - $(date +'%Y-%m-%d %H:%M')"
+            git push
+          else
+            echo "No changes to commit"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -51,7 +68,7 @@ jobs:
         if: always()
         run: |
           if [ "${{ job.status }}" == "success" ]; then
-            echo "✅ Data update completed successfully (Mon/Wed/Fri schedule)"
+            echo "✅ Data update completed successfully (Tue/Thu schedule)"
           else
             echo "❌ Data update failed"
             exit 1

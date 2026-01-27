@@ -3,9 +3,10 @@ node_modules/
 *.log
 .DS_Store
 
-# Don't ignore data files - needed for Vercel deployment
-# data/*.json
-# data/*.txt
+# Data files are TRACKED - needed for Vercel deployment and GitHub Actions
+!data/
+!data/*.json
+!data/*.txt
 
 google-credentials.json
 
