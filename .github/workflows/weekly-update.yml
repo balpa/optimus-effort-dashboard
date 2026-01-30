@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '0 9 * * 2'
     - cron: '0 9 * * 4'
+    - cron: '0 9 * * 6'
   
   workflow_dispatch:
 
@@ -60,7 +61,7 @@ jobs:
           
           # Commit if there are changes
           if ! git diff --staged --quiet; then
-            git commit -m "Data update (Tue/Thu) - $(date +'%Y-%m-%d %H:%M')"
+            git commit -m "Data update (Tue/Thu/Sat) - $(date +'%Y-%m-%d %H:%M')"
             git push
           else
             echo "No changes to commit"
