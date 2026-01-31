@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-01-29T10:01:52.123Z
+Generated: 2026-01-31T09:36:37.080Z
 
 ============================================================
 March 2025
@@ -294,22 +294,26 @@ From 13 points (1 changes):
 ============================================================
 January 2026
 ============================================================
-Total Issues: 457
-Total Story Point Decreases: 21
+Total Issues: 526
+Total Story Point Decreases: 23
 
 From 2 points (6 changes):
   2 → 1: 6 changes
     Keys: OPT-219301, OPT-219239, OPT-219237, OPT-218347, OPT-218066, OPT-217836
 
-From 3 points (11 changes):
+From 3 points (12 changes):
   3 → 1: 3 changes
     Keys: OPT-219146, OPT-218360, OPT-217544
-  3 → 2: 8 changes
-    Keys: OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
+  3 → 2: 9 changes
+    Keys: OPT-219388, OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
 
 From 5 points (4 changes):
   5 → 3: 4 changes
     Keys: OPT-219140, OPT-218842, OPT-218835, OPT-218741
+
+From 13 points (1 changes):
+  13 → 8: 1 changes
+    Keys: OPT-217531
 
 
 
@@ -622,35 +626,37 @@ December 2025:
     13 → 8: 1
 
 January 2026:
-  Total Issues: 457
+  Total Issues: 526
 
   Story Point Distribution:
-    1 points: 83 (18.2%)
-    2 points: 136 (29.8%)
-    3 points: 156 (34.1%)
-    5 points: 56 (12.3%)
-    8 points: 16 (3.5%)
-    13 points: 4 (0.9%)
+    1 points: 97 (18.4%)
+    2 points: 150 (28.5%)
+    3 points: 177 (33.7%)
+    5 points: 64 (12.2%)
+    8 points: 25 (4.8%)
+    13 points: 7 (1.3%)
     17 points: 2 (0.4%)
     21 points: 2 (0.4%)
     27 points: 1 (0.2%)
     34 points: 1 (0.2%)
 
   Story Point Changes:
-  Total Changes: 21
+  Total Changes: 23
   From 2: 6
     2 → 1: 6
-  From 3: 11
+  From 3: 12
     3 → 1: 3
-    3 → 2: 8
+    3 → 2: 9
   From 5: 4
     5 → 3: 4
+  From 13: 1
+    13 → 8: 1
 
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 7870
-Total Changes: 281
+Total Issues: 7939
+Total Changes: 283
 
 
 ============================================================
@@ -792,7 +798,9 @@ January 2026:
     2 → 1: OPT-219301, OPT-219239, OPT-219237, OPT-218347, OPT-218066, OPT-217836
   From 3:
     3 → 1: OPT-219146, OPT-218360, OPT-217544
-    3 → 2: OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
+    3 → 2: OPT-219388, OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
   From 5:
     5 → 3: OPT-219140, OPT-218842, OPT-218835, OPT-218741
+  From 13:
+    13 → 8: OPT-217531
 
