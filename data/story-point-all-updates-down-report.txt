@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-01-31T09:36:37.080Z
+Generated: 2026-02-03T09:59:54.871Z
 
 ============================================================
 March 2025
@@ -294,26 +294,35 @@ From 13 points (1 changes):
 ============================================================
 January 2026
 ============================================================
-Total Issues: 526
-Total Story Point Decreases: 23
+Total Issues: 555
+Total Story Point Decreases: 26
 
-From 2 points (6 changes):
-  2 → 1: 6 changes
-    Keys: OPT-219301, OPT-219239, OPT-219237, OPT-218347, OPT-218066, OPT-217836
+From 2 points (7 changes):
+  2 → 1: 7 changes
+    Keys: OPT-219301, OPT-219239, OPT-219237, OPT-218347, OPT-218291, OPT-218066, OPT-217836
 
-From 3 points (12 changes):
+From 3 points (13 changes):
   3 → 1: 3 changes
     Keys: OPT-219146, OPT-218360, OPT-217544
-  3 → 2: 9 changes
-    Keys: OPT-219388, OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
+  3 → 2: 10 changes
+    Keys: OPT-220105, OPT-219388, OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
 
 From 5 points (4 changes):
   5 → 3: 4 changes
     Keys: OPT-219140, OPT-218842, OPT-218835, OPT-218741
 
-From 13 points (1 changes):
+From 13 points (2 changes):
+  13 → 3: 1 changes
+    Keys: OPT-219178
   13 → 8: 1 changes
     Keys: OPT-217531
+
+
+============================================================
+February 2026
+============================================================
+Total Issues: 0
+Total Story Point Decreases: 0
 
 
 
@@ -626,37 +635,46 @@ December 2025:
     13 → 8: 1
 
 January 2026:
-  Total Issues: 526
+  Total Issues: 555
 
   Story Point Distribution:
-    1 points: 97 (18.4%)
-    2 points: 150 (28.5%)
-    3 points: 177 (33.7%)
-    5 points: 64 (12.2%)
-    8 points: 25 (4.8%)
-    13 points: 7 (1.3%)
-    17 points: 2 (0.4%)
+    1 points: 106 (19.1%)
+    2 points: 155 (27.9%)
+    3 points: 185 (33.3%)
+    5 points: 69 (12.4%)
+    8 points: 24 (4.3%)
+    13 points: 8 (1.4%)
+    17 points: 4 (0.7%)
     21 points: 2 (0.4%)
     27 points: 1 (0.2%)
-    34 points: 1 (0.2%)
+    44 points: 1 (0.2%)
 
   Story Point Changes:
-  Total Changes: 23
-  From 2: 6
-    2 → 1: 6
-  From 3: 12
+  Total Changes: 26
+  From 2: 7
+    2 → 1: 7
+  From 3: 13
     3 → 1: 3
-    3 → 2: 9
+    3 → 2: 10
   From 5: 4
     5 → 3: 4
-  From 13: 1
+  From 13: 2
+    13 → 3: 1
     13 → 8: 1
+
+February 2026:
+  Total Issues: 0
+
+  Story Point Distribution:
+
+  Story Point Changes:
+  Total Changes: 0
 
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 7939
-Total Changes: 283
+Total Issues: 7968
+Total Changes: 286
 
 
 ============================================================
@@ -795,12 +813,13 @@ December 2025:
 
 January 2026:
   From 2:
-    2 → 1: OPT-219301, OPT-219239, OPT-219237, OPT-218347, OPT-218066, OPT-217836
+    2 → 1: OPT-219301, OPT-219239, OPT-219237, OPT-218347, OPT-218291, OPT-218066, OPT-217836
   From 3:
     3 → 1: OPT-219146, OPT-218360, OPT-217544
-    3 → 2: OPT-219388, OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
+    3 → 2: OPT-220105, OPT-219388, OPT-218939, OPT-218889, OPT-218831, OPT-218196, OPT-218188, OPT-217872, OPT-217749, OPT-217478
   From 5:
     5 → 3: OPT-219140, OPT-218842, OPT-218835, OPT-218741
   From 13:
+    13 → 3: OPT-219178
     13 → 8: OPT-217531
 
