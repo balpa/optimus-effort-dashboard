@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-02-03T10:11:58.076Z
+Generated: 2026-02-05T10:16:50.184Z
 
 ============================================================
 March 2025
@@ -184,7 +184,7 @@ From 13 points (1 changes):
 ============================================================
 January 2026
 ============================================================
-Total Issues: 154
+Total Issues: 157
 Total QA Efforts Decreases: 2
 
 From 3 points (2 changes):
@@ -195,7 +195,7 @@ From 3 points (2 changes):
 ============================================================
 February 2026
 ============================================================
-Total Issues: 2
+Total Issues: 21
 Total QA Efforts Decreases: 0
 
 
@@ -414,14 +414,14 @@ December 2025:
 
 
 January 2026:
-  Total Issues: 154
+  Total Issues: 157
 
   QA Efforts Distribution:
-    1 points: 4 (2.6%)
-    2 points: 4 (2.6%)
-    3 points: 82 (53.2%)
-    5 points: 41 (26.6%)
-    8 points: 15 (9.7%)
+    1 points: 4 (2.5%)
+    2 points: 5 (3.2%)
+    3 points: 84 (53.5%)
+    5 points: 40 (25.5%)
+    8 points: 16 (10.2%)
     13 points: 7 (4.5%)
     17 points: 1 (0.6%)
 
@@ -432,11 +432,12 @@ January 2026:
 
 
 February 2026:
-  Total Issues: 2
+  Total Issues: 21
 
   QA Efforts Distribution:
-    1 points: 1 (50.0%)
-    3 points: 1 (50.0%)
+    1 points: 1 (4.8%)
+    3 points: 16 (76.2%)
+    5 points: 4 (19.0%)
 
   QA Efforts Changes:
   Total Changes: 0
@@ -457,14 +458,14 @@ September 2025: 5.13
 October 2025: 4.23
 November 2025: 4.04
 December 2025: 4.04
-January 2026: 4.49
-February 2026: 2.00
+January 2026: 4.47
+February 2026: 3.29
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 1545
+Total Issues Across All Months: 1567
 Total QA Efforts Increases: 80
-Average QA Efforts Increase Rate: 5.18%
-Overall Average QA Efforts: 4.26
+Average QA Efforts Increase Rate: 5.11%
+Overall Average QA Efforts: 4.37

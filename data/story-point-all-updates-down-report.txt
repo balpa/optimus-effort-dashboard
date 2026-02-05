@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-02-03T09:59:54.871Z
+Generated: 2026-02-05T10:05:50.227Z
 
 ============================================================
 March 2025
@@ -132,32 +132,7 @@ From 5 points (13 changes):
     Keys: OPT-199826, OPT-199585, OPT-199028, OPT-198992, OPT-198928, OPT-198670, OPT-198394, OPT-198310, OPT-198226, OPT-198202, OPT-198004, OPT-197742, OPT-197519
 
 
-============================================================
-August 2025
-============================================================
-Total Issues: 741
-Total Story Point Decreases: 20
-
-From 3 points (3 changes):
-  3 → 1: 1 changes
-    Keys: OPT-200986
-  3 → 2: 2 changes
-    Keys: OPT-202959, OPT-201497
-
-From 5 points (13 changes):
-  5 → 3: 13 changes
-    Keys: OPT-203101, OPT-202971, OPT-202291, OPT-202167, OPT-201996, OPT-201974, OPT-201935, OPT-201870, OPT-201864, OPT-200994, OPT-200861, OPT-200705, OPT-200552
-
-From 8 points (3 changes):
-  8 → 3: 1 changes
-    Keys: OPT-202219
-  8 → 5: 2 changes
-    Keys: OPT-203284, OPT-200627
-
-From 13 points (1 changes):
-  13 → 8: 1 changes
-    Keys: OPT-202108
-
+August 2025: ERROR - terminated
 
 ============================================================
 September 2025
@@ -294,7 +269,7 @@ From 13 points (1 changes):
 ============================================================
 January 2026
 ============================================================
-Total Issues: 555
+Total Issues: 607
 Total Story Point Decreases: 26
 
 From 2 points (7 changes):
@@ -321,8 +296,12 @@ From 13 points (2 changes):
 ============================================================
 February 2026
 ============================================================
-Total Issues: 0
-Total Story Point Decreases: 0
+Total Issues: 26
+Total Story Point Decreases: 1
+
+From 3 points (1 changes):
+  3 → 2: 1 changes
+    Keys: OPT-220507
 
 
 
@@ -477,34 +456,6 @@ July 2025:
   From 5: 13
     5 → 3: 13
 
-August 2025:
-  Total Issues: 741
-
-  Story Point Distribution:
-    1 points: 105 (14.2%)
-    2 points: 20 (2.7%)
-    3 points: 411 (55.5%)
-    5 points: 135 (18.2%)
-    8 points: 46 (6.2%)
-    13 points: 10 (1.3%)
-    17 points: 7 (0.9%)
-    21 points: 2 (0.3%)
-    27 points: 3 (0.4%)
-    34 points: 2 (0.3%)
-
-  Story Point Changes:
-  Total Changes: 20
-  From 3: 3
-    3 → 1: 1
-    3 → 2: 2
-  From 5: 13
-    5 → 3: 13
-  From 8: 3
-    8 → 3: 1
-    8 → 5: 2
-  From 13: 1
-    13 → 8: 1
-
 September 2025:
   Total Issues: 747
 
@@ -635,17 +586,17 @@ December 2025:
     13 → 8: 1
 
 January 2026:
-  Total Issues: 555
+  Total Issues: 607
 
   Story Point Distribution:
-    1 points: 106 (19.1%)
-    2 points: 155 (27.9%)
-    3 points: 185 (33.3%)
-    5 points: 69 (12.4%)
-    8 points: 24 (4.3%)
-    13 points: 8 (1.4%)
-    17 points: 4 (0.7%)
-    21 points: 2 (0.4%)
+    1 points: 113 (18.6%)
+    2 points: 169 (27.8%)
+    3 points: 205 (33.8%)
+    5 points: 75 (12.4%)
+    8 points: 27 (4.4%)
+    13 points: 8 (1.3%)
+    17 points: 6 (1.0%)
+    21 points: 2 (0.3%)
     27 points: 1 (0.2%)
     44 points: 1 (0.2%)
 
@@ -663,18 +614,23 @@ January 2026:
     13 → 8: 1
 
 February 2026:
-  Total Issues: 0
+  Total Issues: 26
 
   Story Point Distribution:
+    1 points: 6 (23.1%)
+    2 points: 10 (38.5%)
+    3 points: 10 (38.5%)
 
   Story Point Changes:
-  Total Changes: 0
+  Total Changes: 1
+  From 3: 1
+    3 → 2: 1
 
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 7968
-Total Changes: 286
+Total Issues: 7305
+Total Changes: 267
 
 
 ============================================================
@@ -738,18 +694,6 @@ July 2025:
     3 → 2: OPT-199154, OPT-199128, OPT-198939, OPT-198374, OPT-198270, OPT-197539, OPT-197502, OPT-197433, OPT-197312
   From 5:
     5 → 3: OPT-199826, OPT-199585, OPT-199028, OPT-198992, OPT-198928, OPT-198670, OPT-198394, OPT-198310, OPT-198226, OPT-198202, OPT-198004, OPT-197742, OPT-197519
-
-August 2025:
-  From 3:
-    3 → 1: OPT-200986
-    3 → 2: OPT-202959, OPT-201497
-  From 5:
-    5 → 3: OPT-203101, OPT-202971, OPT-202291, OPT-202167, OPT-201996, OPT-201974, OPT-201935, OPT-201870, OPT-201864, OPT-200994, OPT-200861, OPT-200705, OPT-200552
-  From 8:
-    8 → 3: OPT-202219
-    8 → 5: OPT-203284, OPT-200627
-  From 13:
-    13 → 8: OPT-202108
 
 September 2025:
   From 1:
@@ -822,4 +766,8 @@ January 2026:
   From 13:
     13 → 3: OPT-219178
     13 → 8: OPT-217531
+
+February 2026:
+  From 3:
+    3 → 2: OPT-220507
 
