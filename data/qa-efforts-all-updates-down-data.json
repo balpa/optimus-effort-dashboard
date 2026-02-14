@@ -709,7 +709,7 @@
   },
   "january2026": {
     "name": "January 2026",
-    "totalIssues": 163,
+    "totalIssues": 164,
     "totalChanges": 2,
     "byBaseAndTarget": {
       "1": {},
@@ -727,11 +727,11 @@
     "distribution": {
       "1": 4,
       "2": 5,
-      "3": 84,
-      "5": 45,
+      "3": 85,
+      "5": 44,
       "8": 16,
       "13": 8,
-      "17": 1
+      "17": 2
     },
     "keys": [
       {
@@ -748,13 +748,15 @@
   },
   "february2026": {
     "name": "February 2026",
-    "totalIssues": 58,
-    "totalChanges": 0,
+    "totalIssues": 88,
+    "totalChanges": 1,
     "byBaseAndTarget": {
       "1": {},
       "2": {},
       "3": {},
-      "5": {},
+      "5": {
+        "3": 1
+      },
       "8": {},
       "13": {},
       "17": {},
@@ -763,11 +765,19 @@
     },
     "distribution": {
       "1": 2,
-      "2": 1,
-      "3": 37,
-      "5": 15,
-      "8": 3
+      "2": 3,
+      "3": 46,
+      "5": 28,
+      "8": 6,
+      "13": 1,
+      "17": 2
     },
-    "keys": []
+    "keys": [
+      {
+        "key": "OPT-220762",
+        "from": 5,
+        "to": 3
+      }
+    ]
   }
 }
