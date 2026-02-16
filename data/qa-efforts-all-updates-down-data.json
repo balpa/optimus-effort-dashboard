@@ -748,7 +748,7 @@
   },
   "february2026": {
     "name": "February 2026",
-    "totalIssues": 88,
+    "totalIssues": 90,
     "totalChanges": 1,
     "byBaseAndTarget": {
       "1": {},
@@ -766,9 +766,9 @@
     "distribution": {
       "1": 2,
       "2": 3,
-      "3": 46,
+      "3": 47,
       "5": 28,
-      "8": 6,
+      "8": 7,
       "13": 1,
       "17": 2
     },
