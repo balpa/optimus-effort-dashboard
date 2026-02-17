@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-02-16T15:40:25.109Z
+Generated: 2026-02-17T09:33:45.670Z
 
 ============================================================
 March 2025
@@ -294,7 +294,7 @@ From 13 points (1 changes):
 ============================================================
 January 2026
 ============================================================
-Total Issues: 665
+Total Issues: 667
 Total Story Point Decreases: 27
 
 From 2 points (7 changes):
@@ -321,7 +321,7 @@ From 13 points (2 changes):
 ============================================================
 February 2026
 ============================================================
-Total Issues: 252
+Total Issues: 265
 Total Story Point Decreases: 11
 
 From 3 points (7 changes):
@@ -647,21 +647,21 @@ December 2025:
     13 → 8: 1
 
 January 2026:
-  Total Issues: 665
+  Total Issues: 667
 
   Story Point Distribution:
-    No Story Points: 1 (0.2%)
+    No Story Points: 1 (0.1%)
     1 points: 118 (17.7%)
-    2 points: 172 (25.9%)
-    3 points: 221 (33.2%)
-    5 points: 88 (13.2%)
+    2 points: 173 (25.9%)
+    3 points: 221 (33.1%)
+    5 points: 89 (13.3%)
     8 points: 36 (5.4%)
     13 points: 16 (2.4%)
     17 points: 8 (1.2%)
     21 points: 2 (0.3%)
-    27 points: 1 (0.2%)
-    34 points: 1 (0.2%)
-    44 points: 1 (0.2%)
+    27 points: 1 (0.1%)
+    34 points: 1 (0.1%)
+    44 points: 1 (0.1%)
 
   Story Point Changes:
   Total Changes: 27
@@ -677,16 +677,16 @@ January 2026:
     13 → 8: 1
 
 February 2026:
-  Total Issues: 252
+  Total Issues: 265
 
   Story Point Distribution:
     0 points: 1 (0.4%)
-    1 points: 35 (13.9%)
-    2 points: 77 (30.6%)
-    3 points: 97 (38.5%)
-    5 points: 26 (10.3%)
-    8 points: 11 (4.4%)
-    13 points: 4 (1.6%)
+    1 points: 38 (14.3%)
+    2 points: 81 (30.6%)
+    3 points: 100 (37.7%)
+    5 points: 27 (10.2%)
+    8 points: 12 (4.5%)
+    13 points: 5 (1.9%)
     17 points: 1 (0.4%)
 
   Story Point Changes:
@@ -701,7 +701,7 @@ February 2026:
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 8330
+Total Issues: 8345
 Total Changes: 298
 
 

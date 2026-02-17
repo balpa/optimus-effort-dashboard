@@ -1724,7 +1724,7 @@
   },
   "january2026": {
     "name": "January 2026",
-    "totalIssues": 665,
+    "totalIssues": 667,
     "totalChanges": 27,
     "byBaseAndTarget": {
       "1": {},
@@ -1749,9 +1749,9 @@
     },
     "distribution": {
       "1": 118,
-      "2": 172,
+      "2": 173,
       "3": 221,
-      "5": 88,
+      "5": 89,
       "8": 36,
       "13": 16,
       "17": 8,
@@ -1901,7 +1901,7 @@
   },
   "february2026": {
     "name": "February 2026",
-    "totalIssues": 252,
+    "totalIssues": 265,
     "totalChanges": 11,
     "byBaseAndTarget": {
       "1": {},
@@ -1922,12 +1922,12 @@
     },
     "distribution": {
       "0": 1,
-      "1": 35,
-      "2": 77,
-      "3": 97,
-      "5": 26,
-      "8": 11,
-      "13": 4,
+      "1": 38,
+      "2": 81,
+      "3": 100,
+      "5": 27,
+      "8": 12,
+      "13": 5,
       "17": 1
     },
     "keys": [
