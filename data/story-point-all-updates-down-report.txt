@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-02-17T09:33:45.670Z
+Generated: 2026-02-19T09:33:05.257Z
 
 ============================================================
 March 2025
@@ -294,7 +294,7 @@ From 13 points (1 changes):
 ============================================================
 January 2026
 ============================================================
-Total Issues: 667
+Total Issues: 668
 Total Story Point Decreases: 27
 
 From 2 points (7 changes):
@@ -321,7 +321,7 @@ From 13 points (2 changes):
 ============================================================
 February 2026
 ============================================================
-Total Issues: 265
+Total Issues: 325
 Total Story Point Decreases: 11
 
 From 3 points (7 changes):
@@ -647,11 +647,11 @@ December 2025:
     13 → 8: 1
 
 January 2026:
-  Total Issues: 667
+  Total Issues: 668
 
   Story Point Distribution:
     No Story Points: 1 (0.1%)
-    1 points: 118 (17.7%)
+    1 points: 119 (17.8%)
     2 points: 173 (25.9%)
     3 points: 221 (33.1%)
     5 points: 89 (13.3%)
@@ -677,17 +677,18 @@ January 2026:
     13 → 8: 1
 
 February 2026:
-  Total Issues: 265
+  Total Issues: 325
 
   Story Point Distribution:
-    0 points: 1 (0.4%)
-    1 points: 38 (14.3%)
-    2 points: 81 (30.6%)
-    3 points: 100 (37.7%)
-    5 points: 27 (10.2%)
-    8 points: 12 (4.5%)
-    13 points: 5 (1.9%)
-    17 points: 1 (0.4%)
+    0 points: 1 (0.3%)
+    1 points: 43 (13.2%)
+    2 points: 94 (28.9%)
+    3 points: 123 (37.8%)
+    5 points: 39 (12.0%)
+    8 points: 16 (4.9%)
+    13 points: 7 (2.2%)
+    17 points: 1 (0.3%)
+    21 points: 1 (0.3%)
 
   Story Point Changes:
   Total Changes: 11
@@ -701,7 +702,7 @@ February 2026:
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 8345
+Total Issues: 8406
 Total Changes: 298
 
 

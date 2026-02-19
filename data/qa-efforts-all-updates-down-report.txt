@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-02-17T09:45:11.374Z
+Generated: 2026-02-19T09:42:30.207Z
 
 ============================================================
 March 2025
@@ -195,12 +195,8 @@ From 3 points (2 changes):
 ============================================================
 February 2026
 ============================================================
-Total Issues: 92
-Total QA Efforts Decreases: 1
-
-From 5 points (1 changes):
-  5 → 3: 1 changes
-    Keys: OPT-220762
+Total Issues: 114
+Total QA Efforts Decreases: 0
 
 
 
@@ -423,9 +419,9 @@ January 2026:
   QA Efforts Distribution:
     1 points: 4 (2.4%)
     2 points: 5 (3.0%)
-    3 points: 85 (51.8%)
+    3 points: 84 (51.2%)
     5 points: 44 (26.8%)
-    8 points: 16 (9.8%)
+    8 points: 17 (10.4%)
     13 points: 8 (4.9%)
     17 points: 2 (1.2%)
 
@@ -436,22 +432,20 @@ January 2026:
 
 
 February 2026:
-  Total Issues: 92
+  Total Issues: 114
 
   QA Efforts Distribution:
-    No QA Efforts: 1 (1.1%)
-    1 points: 2 (2.2%)
-    2 points: 3 (3.3%)
-    3 points: 47 (51.1%)
-    5 points: 28 (30.4%)
-    8 points: 7 (7.6%)
-    13 points: 2 (2.2%)
-    17 points: 2 (2.2%)
+    No QA Efforts: 1 (0.9%)
+    1 points: 2 (1.8%)
+    2 points: 6 (5.3%)
+    3 points: 57 (50.0%)
+    5 points: 37 (32.5%)
+    8 points: 7 (6.1%)
+    13 points: 2 (1.8%)
+    17 points: 2 (1.8%)
 
   QA Efforts Changes:
-  Total Changes: 1
-  From 5: 1
-    5 → 3: 1
+  Total Changes: 0
 
 
 
@@ -469,14 +463,14 @@ September 2025: 5.13
 October 2025: 4.23
 November 2025: 4.04
 December 2025: 4.04
-January 2026: 4.60
-February 2026: 4.45
+January 2026: 4.63
+February 2026: 4.30
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 1645
-Total QA Efforts Increases: 81
-Average QA Efforts Increase Rate: 4.92%
-Overall Average QA Efforts: 4.47
+Total Issues Across All Months: 1667
+Total QA Efforts Increases: 80
+Average QA Efforts Increase Rate: 4.80%
+Overall Average QA Efforts: 4.46
