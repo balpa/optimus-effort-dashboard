@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-03-19T09:34:09.671Z
+Generated: 2026-03-21T09:23:29.728Z
 
 ============================================================
 March 2025
@@ -210,12 +210,12 @@ From 5 points (1 changes):
 ============================================================
 March 2026
 ============================================================
-Total Issues: 86
-Total QA Efforts Decreases: 6
+Total Issues: 96
+Total QA Efforts Decreases: 8
 
-From 3 points (4 changes):
-  3 → 2: 4 changes
-    Keys: OPT-224375, OPT-223896, OPT-223853, OPT-223204
+From 3 points (6 changes):
+  3 → 2: 6 changes
+    Keys: OPT-224846, OPT-224580, OPT-224375, OPT-223896, OPT-223853, OPT-223204
 
 From 5 points (2 changes):
   5 → 3: 2 changes
@@ -475,20 +475,20 @@ February 2026:
 
 
 March 2026:
-  Total Issues: 86
+  Total Issues: 96
 
   QA Efforts Distribution:
-    1 points: 3 (3.5%)
-    2 points: 43 (50.0%)
-    3 points: 34 (39.5%)
-    5 points: 3 (3.5%)
-    8 points: 2 (2.3%)
-    13 points: 1 (1.2%)
+    1 points: 3 (3.1%)
+    2 points: 46 (47.9%)
+    3 points: 39 (40.6%)
+    5 points: 4 (4.2%)
+    8 points: 2 (2.1%)
+    13 points: 2 (2.1%)
 
   QA Efforts Changes:
-  Total Changes: 6
-  From 3: 4
-    3 → 2: 4
+  Total Changes: 8
+  From 3: 6
+    3 → 2: 6
   From 5: 2
     5 → 3: 2
 
@@ -510,13 +510,13 @@ November 2025: 4.04
 December 2025: 4.04
 January 2026: 4.63
 February 2026: 4.36
-March 2026: 2.73
+March 2026: 2.85
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 1827
-Total QA Efforts Increases: 88
-Average QA Efforts Increase Rate: 4.82%
+Total Issues Across All Months: 1837
+Total QA Efforts Increases: 90
+Average QA Efforts Increase Rate: 4.90%
 Overall Average QA Efforts: 4.34
