@@ -2397,12 +2397,12 @@
   },
   "march2026": {
     "name": "March 2026",
-    "totalIssues": 96,
-    "totalChanges": 15,
+    "totalIssues": 103,
+    "totalChanges": 16,
     "byBaseAndTarget": {
       "1": {},
       "2": {
-        "3": 9
+        "3": 10
       },
       "3": {
         "5": 2,
@@ -2420,13 +2420,18 @@
     },
     "distribution": {
       "1": 3,
-      "2": 46,
-      "3": 39,
-      "5": 4,
+      "2": 49,
+      "3": 42,
+      "5": 5,
       "8": 2,
       "13": 2
     },
     "keys": [
+      {
+        "key": "OPT-225003",
+        "from": 2,
+        "to": 3
+      },
       {
         "key": "OPT-224756",
         "from": 2,
