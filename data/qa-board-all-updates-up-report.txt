@@ -299,9 +299,9 @@ Increases by Transition:
 
 March 2026
 --------------------------------------------------------------------------------
-Total Issues: 550
-QA Efforts Increases: 72
-Update Rate: 13.09%
+Total Issues: 584
+QA Efforts Increases: 74
+Update Rate: 12.67%
 
 Increases by Transition:
   1 → 2: 14 issues
@@ -309,10 +309,10 @@ Increases by Transition:
   1 → 5: 2 issues
   1 → 8: 1 issues
   2 → 3: 12 issues
-  2 → 5: 4 issues
+  2 → 5: 5 issues
   2 → 8: 2 issues
   2 → 13: 2 issues
-  3 → 5: 13 issues
+  3 → 5: 14 issues
   3 → 8: 7 issues
   3 → 13: 3 issues
   5 → 8: 7 issues
@@ -321,6 +321,6 @@ Increases by Transition:
 
 SUMMARY - ALL MONTHS
 ================================================================================
-Total Issues Analyzed: 9278
-Total QA Efforts Increases: 1430
-Overall Update Rate: 15.41%
+Total Issues Analyzed: 9312
+Total QA Efforts Increases: 1432
+Overall Update Rate: 15.38%
