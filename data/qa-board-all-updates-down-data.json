@@ -1039,7 +1039,7 @@
   },
   "february2026": {
     "name": "February 2026",
-    "totalIssues": 643,
+    "totalIssues": 645,
     "totalChanges": 7,
     "byBaseAndTarget": {
       "1": {},
@@ -1061,8 +1061,8 @@
     },
     "distribution": {
       "0": 4,
-      "1": 184,
-      "2": 187,
+      "1": 185,
+      "2": 188,
       "3": 117,
       "5": 66,
       "8": 25,
@@ -1111,14 +1111,15 @@
   },
   "march2026": {
     "name": "March 2026",
-    "totalIssues": 638,
-    "totalChanges": 5,
+    "totalIssues": 675,
+    "totalChanges": 6,
     "byBaseAndTarget": {
       "1": {},
       "2": {
         "1": 1
       },
       "3": {
+        "1": 1,
         "2": 2
       },
       "5": {},
@@ -1133,15 +1134,15 @@
     },
     "distribution": {
       "0": 1,
-      "1": 191,
-      "2": 184,
-      "3": 136,
-      "5": 52,
-      "8": 30,
-      "13": 8,
+      "1": 203,
+      "2": 183,
+      "3": 150,
+      "5": 58,
+      "8": 34,
+      "13": 9,
       "17": 2,
       "21": 1,
-      "null": 33
+      "null": 34
     },
     "keys": [
       {
@@ -1160,6 +1161,11 @@
         "to": 2
       },
       {
+        "key": "OPT-224100",
+        "from": 3,
+        "to": 1
+      },
+      {
         "key": "OPT-223954",
         "from": 3,
         "to": 2
@@ -1173,7 +1179,7 @@
   },
   "april2026": {
     "name": "April 2026",
-    "totalIssues": 2,
+    "totalIssues": 33,
     "totalChanges": 0,
     "byBaseAndTarget": {
       "1": {},
@@ -1187,7 +1193,10 @@
       "34": {}
     },
     "distribution": {
-      "1": 2
+      "1": 13,
+      "2": 10,
+      "3": 9,
+      "null": 1
     },
     "keys": []
   }
