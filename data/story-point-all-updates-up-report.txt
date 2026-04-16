@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→higher)
-Generated: 2026-04-14T09:38:54.328Z
+Generated: 2026-04-16T09:40:03.682Z
 
 ============================================================
 March 2025
@@ -738,8 +738,8 @@ From 13 points (3 changes):
 ============================================================
 March 2026
 ============================================================
-Total Issues: 714
-Total Story Point Increases: 127
+Total Issues: 718
+Total Story Point Increases: 128
 
 From 1 points (9 changes):
   1 → 2: 6 changes
@@ -757,15 +757,15 @@ From 2 points (51 changes):
   2 → 8: 2 changes
     Keys: OPT-225384, OPT-223555
 
-From 3 points (40 changes):
+From 3 points (41 changes):
   3 → 5: 30 changes
     Keys: OPT-225691, OPT-225654, OPT-225515, OPT-225445, OPT-225344, OPT-225342, OPT-225184, OPT-225180, OPT-225053, OPT-224982, OPT-224841, OPT-224838, OPT-224761, OPT-224698, OPT-224604, OPT-224485, OPT-224277, OPT-224104, OPT-224088, OPT-223958, OPT-223397, OPT-223366, OPT-223345, OPT-223341, OPT-223236, OPT-223217, OPT-223172, OPT-223101, OPT-222943, OPT-222930
   3 → 8: 7 changes
     Keys: OPT-224683, OPT-224458, OPT-223991, OPT-223856, OPT-223739, OPT-223487, OPT-222887
   3 → 13: 2 changes
     Keys: OPT-224716, OPT-224633
-  3 → 21: 1 changes
-    Keys: OPT-223445
+  3 → 21: 2 changes
+    Keys: OPT-223851, OPT-223445
 
 From 5 points (23 changes):
   5 → 8: 16 changes
@@ -787,12 +787,12 @@ From 8 points (4 changes):
 ============================================================
 April 2026
 ============================================================
-Total Issues: 226
-Total Story Point Increases: 36
+Total Issues: 290
+Total Story Point Increases: 42
 
-From 1 points (7 changes):
-  1 → 2: 4 changes
-    Keys: OPT-226666, OPT-226570, OPT-226514, OPT-226420
+From 1 points (9 changes):
+  1 → 2: 6 changes
+    Keys: OPT-226701, OPT-226666, OPT-226570, OPT-226514, OPT-226420, OPT-226373
   1 → 3: 1 changes
     Keys: OPT-226513
   1 → 5: 1 changes
@@ -800,27 +800,31 @@ From 1 points (7 changes):
   1 → 12: 1 changes
     Keys: OPT-226661
 
-From 2 points (18 changes):
-  2 → 3: 16 changes
-    Keys: OPT-226702, OPT-226481, OPT-226361, OPT-226339, OPT-226309, OPT-226264, OPT-226239, OPT-226213, OPT-226203, OPT-226174, OPT-226063, OPT-226052, OPT-226030, OPT-225926, OPT-225925, OPT-225890
+From 2 points (19 changes):
+  2 → 3: 17 changes
+    Keys: OPT-226702, OPT-226636, OPT-226481, OPT-226361, OPT-226339, OPT-226309, OPT-226264, OPT-226239, OPT-226213, OPT-226203, OPT-226174, OPT-226063, OPT-226052, OPT-226030, OPT-225926, OPT-225925, OPT-225890
   2 → 5: 1 changes
     Keys: OPT-226645
   2 → 21: 1 changes
     Keys: OPT-226959
 
-From 3 points (8 changes):
+From 3 points (10 changes):
   3 → 5: 7 changes
     Keys: OPT-226392, OPT-226384, OPT-226348, OPT-226257, OPT-226239, OPT-226145, OPT-225926
-  3 → 8: 1 changes
-    Keys: OPT-226407
+  3 → 8: 2 changes
+    Keys: OPT-226407, OPT-226391
+  3 → 17: 1 changes
+    Keys: OPT-226484
 
 From 5 points (2 changes):
   5 → 8: 2 changes
     Keys: OPT-226347, OPT-226257
 
-From 8 points (1 changes):
+From 8 points (2 changes):
   8 → 13: 1 changes
     Keys: OPT-225953
+  8 → 17: 1 changes
+    Keys: OPT-226111
 
 
 
@@ -1386,23 +1390,23 @@ February 2026:
     13 → 27: 1
 
 March 2026:
-  Total Issues: 714
+  Total Issues: 718
 
   Story Point Distribution:
     0 points: 1 (0.1%)
-    1 points: 63 (8.8%)
-    2 points: 285 (39.9%)
-    3 points: 230 (32.2%)
-    5 points: 77 (10.8%)
+    1 points: 65 (9.1%)
+    2 points: 285 (39.7%)
+    3 points: 230 (32.0%)
+    5 points: 78 (10.9%)
     8 points: 36 (5.0%)
     13 points: 13 (1.8%)
     17 points: 3 (0.4%)
-    21 points: 2 (0.3%)
+    21 points: 3 (0.4%)
     27 points: 2 (0.3%)
     34 points: 2 (0.3%)
 
   Story Point Changes:
-  Total Changes: 127
+  Total Changes: 128
   From 1: 9
     1 → 2: 6
     1 → 3: 2
@@ -1411,11 +1415,11 @@ March 2026:
     2 → 3: 36
     2 → 5: 13
     2 → 8: 2
-  From 3: 40
+  From 3: 41
     3 → 5: 30
     3 → 8: 7
     3 → 13: 2
-    3 → 21: 1
+    3 → 21: 2
   From 5: 23
     5 → 8: 16
     5 → 13: 6
@@ -1426,41 +1430,43 @@ March 2026:
     8 → 27: 1
 
 April 2026:
-  Total Issues: 226
+  Total Issues: 290
 
   Story Point Distribution:
-    No Story Points: 1 (0.4%)
-    1 points: 35 (15.5%)
-    2 points: 91 (40.3%)
-    3 points: 75 (33.2%)
-    5 points: 19 (8.4%)
-    8 points: 3 (1.3%)
-    13 points: 2 (0.9%)
+    1 points: 36 (12.4%)
+    2 points: 128 (44.1%)
+    3 points: 90 (31.0%)
+    5 points: 26 (9.0%)
+    8 points: 6 (2.1%)
+    13 points: 2 (0.7%)
+    17 points: 2 (0.7%)
 
   Story Point Changes:
-  Total Changes: 36
-  From 1: 7
-    1 → 2: 4
+  Total Changes: 42
+  From 1: 9
+    1 → 2: 6
     1 → 3: 1
     1 → 5: 1
     1 → 12: 1
-  From 2: 18
-    2 → 3: 16
+  From 2: 19
+    2 → 3: 17
     2 → 5: 1
     2 → 21: 1
-  From 3: 8
+  From 3: 10
     3 → 5: 7
-    3 → 8: 1
+    3 → 8: 2
+    3 → 17: 1
   From 5: 2
     5 → 8: 2
-  From 8: 1
+  From 8: 2
     8 → 13: 1
+    8 → 17: 1
 
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 9672
-Total Changes: 1671
+Total Issues: 9740
+Total Changes: 1678
 
 
 ============================================================
@@ -1829,7 +1835,7 @@ March 2026:
     3 → 5: OPT-225691, OPT-225654, OPT-225515, OPT-225445, OPT-225344, OPT-225342, OPT-225184, OPT-225180, OPT-225053, OPT-224982, OPT-224841, OPT-224838, OPT-224761, OPT-224698, OPT-224604, OPT-224485, OPT-224277, OPT-224104, OPT-224088, OPT-223958, OPT-223397, OPT-223366, OPT-223345, OPT-223341, OPT-223236, OPT-223217, OPT-223172, OPT-223101, OPT-222943, OPT-222930
     3 → 8: OPT-224683, OPT-224458, OPT-223991, OPT-223856, OPT-223739, OPT-223487, OPT-222887
     3 → 13: OPT-224716, OPT-224633
-    3 → 21: OPT-223445
+    3 → 21: OPT-223851, OPT-223445
   From 5:
     5 → 8: OPT-225736, OPT-225701, OPT-225368, OPT-225077, OPT-225046, OPT-225019, OPT-225008, OPT-224859, OPT-224669, OPT-224635, OPT-224578, OPT-224136, OPT-223694, OPT-223693, OPT-223314, OPT-223185
     5 → 13: OPT-225200, OPT-224897, OPT-224206, OPT-223433, OPT-223235, OPT-223219
@@ -1841,19 +1847,21 @@ March 2026:
 
 April 2026:
   From 1:
-    1 → 2: OPT-226666, OPT-226570, OPT-226514, OPT-226420
+    1 → 2: OPT-226701, OPT-226666, OPT-226570, OPT-226514, OPT-226420, OPT-226373
     1 → 3: OPT-226513
     1 → 5: OPT-226050
     1 → 12: OPT-226661
   From 2:
-    2 → 3: OPT-226702, OPT-226481, OPT-226361, OPT-226339, OPT-226309, OPT-226264, OPT-226239, OPT-226213, OPT-226203, OPT-226174, OPT-226063, OPT-226052, OPT-226030, OPT-225926, OPT-225925, OPT-225890
+    2 → 3: OPT-226702, OPT-226636, OPT-226481, OPT-226361, OPT-226339, OPT-226309, OPT-226264, OPT-226239, OPT-226213, OPT-226203, OPT-226174, OPT-226063, OPT-226052, OPT-226030, OPT-225926, OPT-225925, OPT-225890
     2 → 5: OPT-226645
     2 → 21: OPT-226959
   From 3:
     3 → 5: OPT-226392, OPT-226384, OPT-226348, OPT-226257, OPT-226239, OPT-226145, OPT-225926
-    3 → 8: OPT-226407
+    3 → 8: OPT-226407, OPT-226391
+    3 → 17: OPT-226484
   From 5:
     5 → 8: OPT-226347, OPT-226257
   From 8:
     8 → 13: OPT-225953
+    8 → 17: OPT-226111
 
