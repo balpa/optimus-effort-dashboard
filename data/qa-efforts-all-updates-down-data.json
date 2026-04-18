@@ -867,7 +867,7 @@
   },
   "april2026": {
     "name": "April 2026",
-    "totalIssues": 70,
+    "totalIssues": 82,
     "totalChanges": 3,
     "byBaseAndTarget": {
       "1": {},
@@ -884,10 +884,10 @@
     },
     "distribution": {
       "1": 2,
-      "2": 40,
-      "3": 20,
-      "5": 5,
-      "8": 3
+      "2": 45,
+      "3": 22,
+      "5": 9,
+      "8": 4
     },
     "keys": [
       {
