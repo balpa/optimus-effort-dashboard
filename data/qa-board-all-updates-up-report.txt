@@ -53,28 +53,7 @@ Increases by Transition:
 
 May 2025
 --------------------------------------------------------------------------------
-Total Issues: 830
-QA Efforts Increases: 111
-Update Rate: 13.37%
-
-Increases by Transition:
-  1 → 2: 22 issues
-  1 → 3: 8 issues
-  1 → 8: 3 issues
-  2 → 3: 22 issues
-  2 → 5: 8 issues
-  2 → 8: 2 issues
-  3 → 5: 18 issues
-  3 → 8: 11 issues
-  3 → 13: 2 issues
-  3 → 17: 1 issues
-  3 → 21: 1 issues
-  5 → 8: 6 issues
-  5 → 13: 1 issues
-  5 → 17: 2 issues
-  8 → 13: 2 issues
-  17 → 21: 1 issues
-  21 → 27: 1 issues
+ERROR: Unexpected end of JSON input
 
 June 2025
 --------------------------------------------------------------------------------
@@ -299,9 +278,9 @@ Increases by Transition:
 
 March 2026
 --------------------------------------------------------------------------------
-Total Issues: 720
+Total Issues: 722
 QA Efforts Increases: 119
-Update Rate: 16.53%
+Update Rate: 16.48%
 
 Increases by Transition:
   1 → 2: 16 issues
@@ -324,24 +303,27 @@ Increases by Transition:
 
 April 2026
 --------------------------------------------------------------------------------
-Total Issues: 395
-QA Efforts Increases: 45
-Update Rate: 11.39%
+Total Issues: 465
+QA Efforts Increases: 62
+Update Rate: 13.33%
 
 Increases by Transition:
-  1 → 2: 11 issues
-  1 → 3: 2 issues
-  2 → 3: 19 issues
-  2 → 5: 1 issues
+  1 → 2: 12 issues
+  1 → 3: 3 issues
+  2 → 3: 23 issues
+  2 → 5: 3 issues
   2 → 8: 1 issues
-  3 → 5: 7 issues
-  3 → 8: 1 issues
+  2 → 21: 1 issues
+  3 → 5: 10 issues
+  3 → 8: 2 issues
   3 → 13: 2 issues
-  5 → 13: 1 issues
+  5 → 8: 2 issues
+  5 → 13: 2 issues
+  8 → 13: 1 issues
 
 
 SUMMARY - ALL MONTHS
 ================================================================================
-Total Issues Analyzed: 9847
-Total QA Efforts Increases: 1522
-Overall Update Rate: 15.46%
+Total Issues Analyzed: 9089
+Total QA Efforts Increases: 1428
+Overall Update Rate: 15.71%
