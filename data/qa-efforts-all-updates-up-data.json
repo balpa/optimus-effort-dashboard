@@ -2735,12 +2735,12 @@
   },
   "may2026": {
     "name": "May 2026",
-    "totalIssues": 16,
-    "totalChanges": 3,
+    "totalIssues": 26,
+    "totalChanges": 5,
     "byBaseAndTarget": {
       "1": {},
       "2": {
-        "3": 1
+        "3": 3
       },
       "3": {
         "5": 2
@@ -2754,11 +2754,16 @@
     },
     "distribution": {
       "1": 1,
-      "2": 10,
-      "3": 3,
-      "5": 2
+      "2": 14,
+      "3": 8,
+      "5": 3
     },
     "keys": [
+      {
+        "key": "OPT-229167",
+        "from": 2,
+        "to": 3
+      },
       {
         "key": "OPT-229025",
         "from": 2,
@@ -2768,6 +2773,11 @@
         "key": "OPT-228915",
         "from": 3,
         "to": 5
+      },
+      {
+        "key": "OPT-228861",
+        "from": 2,
+        "to": 3
       },
       {
         "key": "OPT-228786",
