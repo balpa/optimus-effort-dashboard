@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→higher)
-Generated: 2026-05-23T09:49:22.496Z
+Generated: 2026-05-28T10:52:24.566Z
 
 ============================================================
 March 2025
@@ -392,24 +392,26 @@ From 5 points (2 changes):
 ============================================================
 May 2026
 ============================================================
-Total Issues: 108
-Total QA Efforts Increases: 18
+Total Issues: 126
+Total QA Efforts Increases: 24
 
 From 1 points (1 changes):
   1 → 8: 1 changes
     Keys: OPT-229594
 
-From 2 points (11 changes):
-  2 → 3: 6 changes
-    Keys: OPT-230549, OPT-230139, OPT-229479, OPT-229167, OPT-229025, OPT-228861
+From 2 points (13 changes):
+  2 → 3: 8 changes
+    Keys: OPT-230722, OPT-230653, OPT-230549, OPT-230139, OPT-229479, OPT-229167, OPT-229025, OPT-228861
   2 → 5: 5 changes
     Keys: OPT-229948, OPT-229819, OPT-229480, OPT-229439, OPT-229271
 
-From 3 points (5 changes):
-  3 → 5: 4 changes
-    Keys: OPT-229203, OPT-228963, OPT-228915, OPT-228786
+From 3 points (9 changes):
+  3 → 5: 7 changes
+    Keys: OPT-230503, OPT-230238, OPT-229564, OPT-229203, OPT-228963, OPT-228915, OPT-228786
   3 → 8: 1 changes
     Keys: OPT-229647
+  3 → 17: 1 changes
+    Keys: OPT-229122
 
 From 5 points (1 changes):
   5 → 8: 1 changes
@@ -783,26 +785,28 @@ April 2026:
 
 
 May 2026:
-  Total Issues: 108
+  Total Issues: 126
 
   QA Efforts Distribution:
-    No QA Efforts: 1 (0.9%)
-    1 points: 4 (3.7%)
-    2 points: 68 (63.0%)
-    3 points: 22 (20.4%)
-    5 points: 10 (9.3%)
-    8 points: 3 (2.8%)
+    No QA Efforts: 1 (0.8%)
+    1 points: 5 (4.0%)
+    2 points: 80 (63.5%)
+    3 points: 22 (17.5%)
+    5 points: 14 (11.1%)
+    8 points: 3 (2.4%)
+    17 points: 1 (0.8%)
 
   QA Efforts Changes:
-  Total Changes: 18
+  Total Changes: 24
   From 1: 1
     1 → 8: 1
-  From 2: 11
-    2 → 3: 6
+  From 2: 13
+    2 → 3: 8
     2 → 5: 5
-  From 3: 5
-    3 → 5: 4
+  From 3: 9
+    3 → 5: 7
     3 → 8: 1
+    3 → 17: 1
   From 5: 1
     5 → 8: 1
 
@@ -826,13 +830,13 @@ January 2026: 4.63
 February 2026: 4.38
 March 2026: 3.14
 April 2026: 2.68
-May 2026: 2.62
+May 2026: 2.74
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 2160
-Total QA Efforts Increases: 462
-Average QA Efforts Increase Rate: 21.39%
-Overall Average QA Efforts: 4.14
+Total Issues Across All Months: 2178
+Total QA Efforts Increases: 468
+Average QA Efforts Increase Rate: 21.49%
+Overall Average QA Efforts: 4.15
