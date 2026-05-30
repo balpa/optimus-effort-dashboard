@@ -2735,7 +2735,7 @@
   },
   "may2026": {
     "name": "May 2026",
-    "totalIssues": 126,
+    "totalIssues": 131,
     "totalChanges": 24,
     "byBaseAndTarget": {
       "1": {
@@ -2761,9 +2761,9 @@
     },
     "distribution": {
       "1": 5,
-      "2": 80,
-      "3": 22,
-      "5": 14,
+      "2": 82,
+      "3": 24,
+      "5": 15,
       "8": 3,
       "17": 1,
       "null": 1
