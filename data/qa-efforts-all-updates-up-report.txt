@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→higher)
-Generated: 2026-06-11T10:59:56.641Z
+Generated: 2026-06-13T10:18:09.351Z
 
 ============================================================
 March 2025
@@ -369,7 +369,7 @@ From 13 points (1 changes):
 ============================================================
 April 2026
 ============================================================
-Total Issues: 152
+Total Issues: 153
 Total QA Efforts Increases: 23
 
 From 2 points (10 changes):
@@ -421,7 +421,7 @@ From 5 points (1 changes):
 ============================================================
 June 2026
 ============================================================
-Total Issues: 37
+Total Issues: 43
 Total QA Efforts Increases: 5
 
 From 2 points (3 changes):
@@ -782,13 +782,13 @@ March 2026:
 
 
 April 2026:
-  Total Issues: 152
+  Total Issues: 153
 
   QA Efforts Distribution:
     1 points: 4 (2.6%)
-    2 points: 94 (61.8%)
-    3 points: 36 (23.7%)
-    5 points: 12 (7.9%)
+    2 points: 94 (61.4%)
+    3 points: 37 (24.2%)
+    5 points: 12 (7.8%)
     8 points: 6 (3.9%)
 
   QA Efforts Changes:
@@ -831,14 +831,14 @@ May 2026:
 
 
 June 2026:
-  Total Issues: 37
+  Total Issues: 43
 
   QA Efforts Distribution:
-    1 points: 3 (8.1%)
-    2 points: 21 (56.8%)
-    3 points: 7 (18.9%)
-    5 points: 5 (13.5%)
-    8 points: 1 (2.7%)
+    1 points: 3 (7.0%)
+    2 points: 26 (60.5%)
+    3 points: 8 (18.6%)
+    5 points: 5 (11.6%)
+    8 points: 1 (2.3%)
 
   QA Efforts Changes:
   Total Changes: 5
@@ -868,15 +868,15 @@ December 2025: 4.04
 January 2026: 4.63
 February 2026: 4.38
 March 2026: 3.14
-April 2026: 2.68
+April 2026: 2.69
 May 2026: 2.75
-June 2026: 2.68
+June 2026: 2.60
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 2230
+Total Issues Across All Months: 2237
 Total QA Efforts Increases: 475
-Average QA Efforts Increase Rate: 21.30%
-Overall Average QA Efforts: 4.06
+Average QA Efforts Increase Rate: 21.23%
+Overall Average QA Efforts: 4.05
