@@ -188,7 +188,7 @@ Decreases by Transition:
 
 April 2026
 --------------------------------------------------------------------------------
-Total Issues: 719
+Total Issues: 720
 QA Efforts Decreases: 8
 Update Rate: 1.11%
 
@@ -215,9 +215,9 @@ Decreases by Transition:
 
 June 2026
 --------------------------------------------------------------------------------
-Total Issues: 347
+Total Issues: 403
 QA Efforts Decreases: 5
-Update Rate: 1.44%
+Update Rate: 1.24%
 
 Decreases by Transition:
   2 → 1: 1 issues
@@ -228,6 +228,6 @@ Decreases by Transition:
 
 SUMMARY - ALL MONTHS
 ================================================================================
-Total Issues Analyzed: 11200
+Total Issues Analyzed: 11257
 Total QA Efforts Decreases: 153
-Overall Update Rate: 1.37%
+Overall Update Rate: 1.36%
