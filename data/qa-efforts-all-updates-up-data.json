@@ -2903,12 +2903,12 @@
   },
   "june2026": {
     "name": "June 2026",
-    "totalIssues": 108,
-    "totalChanges": 15,
+    "totalIssues": 112,
+    "totalChanges": 14,
     "byBaseAndTarget": {
       "1": {},
       "2": {
-        "3": 7,
+        "3": 6,
         "5": 3,
         "8": 1
       },
@@ -2925,17 +2925,12 @@
     },
     "distribution": {
       "1": 4,
-      "2": 65,
-      "3": 27,
+      "2": 70,
+      "3": 26,
       "5": 9,
       "8": 3
     },
     "keys": [
-      {
-        "key": "OPT-234839",
-        "from": 2,
-        "to": 3
-      },
       {
         "key": "OPT-234493",
         "from": 2,
