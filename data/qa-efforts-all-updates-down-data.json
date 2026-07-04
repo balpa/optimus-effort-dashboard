@@ -1017,12 +1017,14 @@
   },
   "july2026": {
     "name": "July 2026",
-    "totalIssues": 1,
-    "totalChanges": 0,
+    "totalIssues": 8,
+    "totalChanges": 2,
     "byBaseAndTarget": {
       "1": {},
       "2": {},
-      "3": {},
+      "3": {
+        "2": 2
+      },
       "5": {},
       "8": {},
       "13": {},
@@ -1031,8 +1033,21 @@
       "34": {}
     },
     "distribution": {
-      "3": 1
+      "2": 6,
+      "3": 1,
+      "5": 1
     },
-    "keys": []
+    "keys": [
+      {
+        "key": "OPT-235676",
+        "from": 3,
+        "to": 2
+      },
+      {
+        "key": "OPT-235676",
+        "from": 3,
+        "to": 2
+      }
+    ]
   }
 }
