@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→higher)
-Generated: 2026-07-09T12:11:47.372Z
+Generated: 2026-07-11T10:15:53.929Z
 
 ============================================================
 March 2025
@@ -866,8 +866,8 @@ From 21 points (2 changes):
 ============================================================
 May 2026
 ============================================================
-Total Issues: 706
-Total Story Point Increases: 162
+Total Issues: 707
+Total Story Point Increases: 163
 
 From 1 points (37 changes):
   1 → 2: 25 changes
@@ -905,11 +905,11 @@ From 3 points (43 changes):
   3 → 17: 1 changes
     Keys: OPT-229605
 
-From 5 points (19 changes):
+From 5 points (20 changes):
   5 → 8: 12 changes
     Keys: OPT-232342, OPT-232149, OPT-232042, OPT-231182, OPT-230633, OPT-229862, OPT-229516, OPT-229195, OPT-229138, OPT-229010, OPT-228992, OPT-228781
-  5 → 13: 1 changes
-    Keys: OPT-232073
+  5 → 13: 2 changes
+    Keys: OPT-232073, OPT-229213
   5 → 17: 3 changes
     Keys: OPT-232159, OPT-228943, OPT-228842
   5 → 21: 2 changes
@@ -927,8 +927,8 @@ From 8 points (5 changes):
 ============================================================
 June 2026
 ============================================================
-Total Issues: 687
-Total Story Point Increases: 138
+Total Issues: 696
+Total Story Point Increases: 149
 
 From 1 points (17 changes):
   1 → 2: 13 changes
@@ -938,23 +938,25 @@ From 1 points (17 changes):
   1 → 5: 1 changes
     Keys: OPT-233563
 
-From 2 points (54 changes):
-  2 → 3: 36 changes
-    Keys: OPT-235290, OPT-235214, OPT-235189, OPT-235142, OPT-235126, OPT-234922, OPT-234823, OPT-234799, OPT-234696, OPT-234639, OPT-234591, OPT-234427, OPT-234409, OPT-234405, OPT-234282, OPT-234130, OPT-234127, OPT-233905, OPT-233815, OPT-233596, OPT-233536, OPT-233521, OPT-233516, OPT-233449, OPT-233421, OPT-233176, OPT-233096, OPT-233032, OPT-232987, OPT-232980, OPT-232868, OPT-232682, OPT-232645, OPT-232576, OPT-232476, OPT-232464
-  2 → 5: 14 changes
-    Keys: OPT-234958, OPT-234866, OPT-234748, OPT-234397, OPT-233904, OPT-233701, OPT-233624, OPT-233531, OPT-233378, OPT-233282, OPT-233172, OPT-232922, OPT-232839, OPT-232483
+From 2 points (58 changes):
+  2 → 3: 37 changes
+    Keys: OPT-235290, OPT-235214, OPT-235189, OPT-235183, OPT-235142, OPT-235126, OPT-234922, OPT-234823, OPT-234799, OPT-234696, OPT-234639, OPT-234591, OPT-234427, OPT-234409, OPT-234405, OPT-234282, OPT-234130, OPT-234127, OPT-233905, OPT-233815, OPT-233596, OPT-233536, OPT-233521, OPT-233516, OPT-233449, OPT-233421, OPT-233176, OPT-233096, OPT-233032, OPT-232987, OPT-232980, OPT-232868, OPT-232682, OPT-232645, OPT-232576, OPT-232476, OPT-232464
+  2 → 5: 16 changes
+    Keys: OPT-235112, OPT-235096, OPT-234958, OPT-234866, OPT-234748, OPT-234397, OPT-233904, OPT-233701, OPT-233624, OPT-233531, OPT-233378, OPT-233282, OPT-233172, OPT-232922, OPT-232839, OPT-232483
   2 → 8: 4 changes
     Keys: OPT-234928, OPT-233517, OPT-233388, OPT-233153
+  2 → 13: 1 changes
+    Keys: OPT-234826
 
-From 3 points (46 changes):
+From 3 points (51 changes):
   3 → 4: 1 changes
     Keys: OPT-234965
-  3 → 5: 22 changes
-    Keys: OPT-235224, OPT-234741, OPT-234557, OPT-234488, OPT-234430, OPT-234417, OPT-234174, OPT-234123, OPT-234104, OPT-233948, OPT-233832, OPT-233583, OPT-233537, OPT-233367, OPT-233359, OPT-233353, OPT-233250, OPT-233184, OPT-233096, OPT-233092, OPT-233084, OPT-232987
-  3 → 8: 12 changes
-    Keys: OPT-235159, OPT-234122, OPT-234086, OPT-233919, OPT-233909, OPT-233645, OPT-233561, OPT-233469, OPT-233336, OPT-233223, OPT-232912, OPT-232765
-  3 → 13: 6 changes
-    Keys: OPT-234573, OPT-234207, OPT-234020, OPT-233681, OPT-233534, OPT-233312
+  3 → 5: 23 changes
+    Keys: OPT-235224, OPT-234741, OPT-234557, OPT-234488, OPT-234430, OPT-234417, OPT-234174, OPT-234133, OPT-234123, OPT-234104, OPT-233948, OPT-233832, OPT-233583, OPT-233537, OPT-233367, OPT-233359, OPT-233353, OPT-233250, OPT-233184, OPT-233096, OPT-233092, OPT-233084, OPT-232987
+  3 → 8: 14 changes
+    Keys: OPT-235159, OPT-234671, OPT-234122, OPT-234086, OPT-233919, OPT-233909, OPT-233663, OPT-233645, OPT-233561, OPT-233469, OPT-233336, OPT-233223, OPT-232912, OPT-232765
+  3 → 13: 8 changes
+    Keys: OPT-234894, OPT-234573, OPT-234334, OPT-234207, OPT-234020, OPT-233681, OPT-233534, OPT-233312
   3 → 17: 3 changes
     Keys: OPT-234626, OPT-233997, OPT-232594
   3 → 21: 1 changes
@@ -972,11 +974,11 @@ From 5 points (11 changes):
   5 → 21: 1 changes
     Keys: OPT-233132
 
-From 8 points (8 changes):
-  8 → 13: 3 changes
-    Keys: OPT-234934, OPT-234086, OPT-233549
-  8 → 17: 1 changes
-    Keys: OPT-233484
+From 8 points (10 changes):
+  8 → 13: 4 changes
+    Keys: OPT-234934, OPT-234086, OPT-233549, OPT-233009
+  8 → 17: 2 changes
+    Keys: OPT-234574, OPT-233484
   8 → 21: 2 changes
     Keys: OPT-233939, OPT-233562
   8 → 27: 2 changes
@@ -992,20 +994,20 @@ From 13 points (2 changes):
 ============================================================
 July 2026
 ============================================================
-Total Issues: 119
-Total Story Point Increases: 12
+Total Issues: 170
+Total Story Point Increases: 23
 
-From 1 points (2 changes):
-  1 → 2: 1 changes
-    Keys: OPT-235619
-  1 → 3: 1 changes
-    Keys: OPT-235532
+From 1 points (5 changes):
+  1 → 2: 3 changes
+    Keys: OPT-235870, OPT-235869, OPT-235619
+  1 → 3: 2 changes
+    Keys: OPT-235924, OPT-235532
 
-From 2 points (7 changes):
-  2 → 3: 4 changes
-    Keys: OPT-235876, OPT-235622, OPT-235599, OPT-235444
-  2 → 5: 3 changes
-    Keys: OPT-235613, OPT-235604, OPT-235456
+From 2 points (15 changes):
+  2 → 3: 10 changes
+    Keys: OPT-236194, OPT-235985, OPT-235876, OPT-235869, OPT-235842, OPT-235790, OPT-235622, OPT-235607, OPT-235599, OPT-235444
+  2 → 5: 5 changes
+    Keys: OPT-236302, OPT-235663, OPT-235613, OPT-235604, OPT-235456
 
 From 3 points (2 changes):
   3 → 5: 1 changes
@@ -1674,23 +1676,23 @@ April 2026:
     21 → 218: 1
 
 May 2026:
-  Total Issues: 706
+  Total Issues: 707
 
   Story Point Distribution:
     No Story Points: 1 (0.1%)
     1 points: 61 (8.6%)
-    2 points: 289 (40.9%)
+    2 points: 290 (41.0%)
     3 points: 198 (28.0%)
-    5 points: 88 (12.5%)
+    5 points: 87 (12.3%)
     8 points: 41 (5.8%)
-    13 points: 14 (2.0%)
+    13 points: 15 (2.1%)
     17 points: 6 (0.8%)
     21 points: 5 (0.7%)
     27 points: 2 (0.3%)
     55 points: 1 (0.1%)
 
   Story Point Changes:
-  Total Changes: 162
+  Total Changes: 163
   From 1: 37
     1 → 2: 25
     1 → 3: 11
@@ -1709,9 +1711,9 @@ May 2026:
     3 → 8: 15
     3 → 13: 4
     3 → 17: 1
-  From 5: 19
+  From 5: 20
     5 → 8: 12
-    5 → 13: 1
+    5 → 13: 2
     5 → 17: 3
     5 → 21: 2
     5 → 27: 1
@@ -1720,36 +1722,37 @@ May 2026:
     8 → 17: 1
 
 June 2026:
-  Total Issues: 687
+  Total Issues: 696
 
   Story Point Distribution:
     No Story Points: 4 (0.6%)
     0 points: 2 (0.3%)
-    1 points: 50 (7.3%)
-    2 points: 264 (38.4%)
-    3 points: 214 (31.1%)
-    5 points: 82 (11.9%)
-    8 points: 40 (5.8%)
-    13 points: 16 (2.3%)
-    17 points: 7 (1.0%)
+    1 points: 50 (7.2%)
+    2 points: 264 (37.9%)
+    3 points: 213 (30.6%)
+    5 points: 85 (12.2%)
+    8 points: 41 (5.9%)
+    13 points: 21 (3.0%)
+    17 points: 8 (1.1%)
     21 points: 6 (0.9%)
     27 points: 2 (0.3%)
 
   Story Point Changes:
-  Total Changes: 138
+  Total Changes: 149
   From 1: 17
     1 → 2: 13
     1 → 3: 3
     1 → 5: 1
-  From 2: 54
-    2 → 3: 36
-    2 → 5: 14
+  From 2: 58
+    2 → 3: 37
+    2 → 5: 16
     2 → 8: 4
-  From 3: 46
+    2 → 13: 1
+  From 3: 51
     3 → 4: 1
-    3 → 5: 22
-    3 → 8: 12
-    3 → 13: 6
+    3 → 5: 23
+    3 → 8: 14
+    3 → 13: 8
     3 → 17: 3
     3 → 21: 1
     3 → 27: 1
@@ -1758,9 +1761,9 @@ June 2026:
     5 → 13: 2
     5 → 17: 2
     5 → 21: 1
-  From 8: 8
-    8 → 13: 3
-    8 → 17: 1
+  From 8: 10
+    8 → 13: 4
+    8 → 17: 2
     8 → 21: 2
     8 → 27: 2
   From 13: 2
@@ -1768,24 +1771,24 @@ June 2026:
     13 → 21: 1
 
 July 2026:
-  Total Issues: 119
+  Total Issues: 170
 
   Story Point Distribution:
-    1 points: 10 (8.4%)
-    2 points: 55 (46.2%)
-    3 points: 42 (35.3%)
-    5 points: 8 (6.7%)
-    8 points: 3 (2.5%)
-    13 points: 1 (0.8%)
+    1 points: 10 (5.9%)
+    2 points: 73 (42.9%)
+    3 points: 63 (37.1%)
+    5 points: 18 (10.6%)
+    8 points: 5 (2.9%)
+    13 points: 1 (0.6%)
 
   Story Point Changes:
-  Total Changes: 12
-  From 1: 2
-    1 → 2: 1
-    1 → 3: 1
-  From 2: 7
-    2 → 3: 4
-    2 → 5: 3
+  Total Changes: 23
+  From 1: 5
+    1 → 2: 3
+    1 → 3: 2
+  From 2: 15
+    2 → 3: 10
+    2 → 5: 5
   From 3: 2
     3 → 5: 1
     3 → 8: 1
@@ -1795,8 +1798,8 @@ July 2026:
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 11692
-Total Changes: 2119
+Total Issues: 11753
+Total Changes: 2142
 
 
 ============================================================
@@ -2234,7 +2237,7 @@ May 2026:
     3 → 17: OPT-229605
   From 5:
     5 → 8: OPT-232342, OPT-232149, OPT-232042, OPT-231182, OPT-230633, OPT-229862, OPT-229516, OPT-229195, OPT-229138, OPT-229010, OPT-228992, OPT-228781
-    5 → 13: OPT-232073
+    5 → 13: OPT-232073, OPT-229213
     5 → 17: OPT-232159, OPT-228943, OPT-228842
     5 → 21: OPT-232161, OPT-229498
     5 → 27: OPT-229176
@@ -2248,14 +2251,15 @@ June 2026:
     1 → 3: OPT-233943, OPT-233120, OPT-232791
     1 → 5: OPT-233563
   From 2:
-    2 → 3: OPT-235290, OPT-235214, OPT-235189, OPT-235142, OPT-235126, OPT-234922, OPT-234823, OPT-234799, OPT-234696, OPT-234639, OPT-234591, OPT-234427, OPT-234409, OPT-234405, OPT-234282, OPT-234130, OPT-234127, OPT-233905, OPT-233815, OPT-233596, OPT-233536, OPT-233521, OPT-233516, OPT-233449, OPT-233421, OPT-233176, OPT-233096, OPT-233032, OPT-232987, OPT-232980, OPT-232868, OPT-232682, OPT-232645, OPT-232576, OPT-232476, OPT-232464
-    2 → 5: OPT-234958, OPT-234866, OPT-234748, OPT-234397, OPT-233904, OPT-233701, OPT-233624, OPT-233531, OPT-233378, OPT-233282, OPT-233172, OPT-232922, OPT-232839, OPT-232483
+    2 → 3: OPT-235290, OPT-235214, OPT-235189, OPT-235183, OPT-235142, OPT-235126, OPT-234922, OPT-234823, OPT-234799, OPT-234696, OPT-234639, OPT-234591, OPT-234427, OPT-234409, OPT-234405, OPT-234282, OPT-234130, OPT-234127, OPT-233905, OPT-233815, OPT-233596, OPT-233536, OPT-233521, OPT-233516, OPT-233449, OPT-233421, OPT-233176, OPT-233096, OPT-233032, OPT-232987, OPT-232980, OPT-232868, OPT-232682, OPT-232645, OPT-232576, OPT-232476, OPT-232464
+    2 → 5: OPT-235112, OPT-235096, OPT-234958, OPT-234866, OPT-234748, OPT-234397, OPT-233904, OPT-233701, OPT-233624, OPT-233531, OPT-233378, OPT-233282, OPT-233172, OPT-232922, OPT-232839, OPT-232483
     2 → 8: OPT-234928, OPT-233517, OPT-233388, OPT-233153
+    2 → 13: OPT-234826
   From 3:
     3 → 4: OPT-234965
-    3 → 5: OPT-235224, OPT-234741, OPT-234557, OPT-234488, OPT-234430, OPT-234417, OPT-234174, OPT-234123, OPT-234104, OPT-233948, OPT-233832, OPT-233583, OPT-233537, OPT-233367, OPT-233359, OPT-233353, OPT-233250, OPT-233184, OPT-233096, OPT-233092, OPT-233084, OPT-232987
-    3 → 8: OPT-235159, OPT-234122, OPT-234086, OPT-233919, OPT-233909, OPT-233645, OPT-233561, OPT-233469, OPT-233336, OPT-233223, OPT-232912, OPT-232765
-    3 → 13: OPT-234573, OPT-234207, OPT-234020, OPT-233681, OPT-233534, OPT-233312
+    3 → 5: OPT-235224, OPT-234741, OPT-234557, OPT-234488, OPT-234430, OPT-234417, OPT-234174, OPT-234133, OPT-234123, OPT-234104, OPT-233948, OPT-233832, OPT-233583, OPT-233537, OPT-233367, OPT-233359, OPT-233353, OPT-233250, OPT-233184, OPT-233096, OPT-233092, OPT-233084, OPT-232987
+    3 → 8: OPT-235159, OPT-234671, OPT-234122, OPT-234086, OPT-233919, OPT-233909, OPT-233663, OPT-233645, OPT-233561, OPT-233469, OPT-233336, OPT-233223, OPT-232912, OPT-232765
+    3 → 13: OPT-234894, OPT-234573, OPT-234334, OPT-234207, OPT-234020, OPT-233681, OPT-233534, OPT-233312
     3 → 17: OPT-234626, OPT-233997, OPT-232594
     3 → 21: OPT-234673
     3 → 27: OPT-234824
@@ -2265,8 +2269,8 @@ June 2026:
     5 → 17: OPT-234821, OPT-234407
     5 → 21: OPT-233132
   From 8:
-    8 → 13: OPT-234934, OPT-234086, OPT-233549
-    8 → 17: OPT-233484
+    8 → 13: OPT-234934, OPT-234086, OPT-233549, OPT-233009
+    8 → 17: OPT-234574, OPT-233484
     8 → 21: OPT-233939, OPT-233562
     8 → 27: OPT-233993, OPT-233519
   From 13:
@@ -2275,11 +2279,11 @@ June 2026:
 
 July 2026:
   From 1:
-    1 → 2: OPT-235619
-    1 → 3: OPT-235532
+    1 → 2: OPT-235870, OPT-235869, OPT-235619
+    1 → 3: OPT-235924, OPT-235532
   From 2:
-    2 → 3: OPT-235876, OPT-235622, OPT-235599, OPT-235444
-    2 → 5: OPT-235613, OPT-235604, OPT-235456
+    2 → 3: OPT-236194, OPT-235985, OPT-235876, OPT-235869, OPT-235842, OPT-235790, OPT-235622, OPT-235607, OPT-235599, OPT-235444
+    2 → 5: OPT-236302, OPT-235663, OPT-235613, OPT-235604, OPT-235456
   From 3:
     3 → 5: OPT-235810
     3 → 8: OPT-235440
