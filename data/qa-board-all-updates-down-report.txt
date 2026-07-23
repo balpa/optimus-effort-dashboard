@@ -48,16 +48,7 @@ Decreases by Transition:
 
 June 2025
 --------------------------------------------------------------------------------
-Total Issues: 656
-QA Efforts Decreases: 6
-Update Rate: 0.91%
-
-Decreases by Transition:
-  2 → 1: 1 issues
-  3 → 1: 1 issues
-  3 → 2: 2 issues
-  13 → 5: 1 issues
-  21 → 13: 1 issues
+ERROR: HTTP error! status: 400 - {"errorMessages":["Caught PSQLException for with \"CHANGE_ITEM\" as (select \"CHANGE_ITEM\".\"newvalue\", \"CHANGE_ITEM\".\"oldvalue\"\nfrom \"public\".\"changeitem\" \"CHANGE_ITEM\"\nwhere \"CHANGE_ITEM\".\"groupid\" = ANY (?) and \"CHANGE_ITEM\".\"fieldid\" = ANY(SELECT UNNEST(?)))\nselect /* called at com.atlassian.jira.issue.changehistory.ChangeHistoryUserMapperFactoryImpl.lambda$buildForChangeGroupIds$5(ChangeHistoryUserMapperFactoryImpl.java:176) */\"value\"\nfrom ((select \"CHANGE_ITEM\".\"newvalue\" as \"value\"\nfrom \"CHANGE_ITEM\" \"CHANGE_ITEM\")\nunion\n(select \"CHANGE_ITEM\".\"oldvalue\" as \"value\"\nfrom \"CHANGE_ITEM\" \"CHANGE_ITEM\")) as \"union_alias\""]}
 
 July 2025
 --------------------------------------------------------------------------------
@@ -203,9 +194,9 @@ Decreases by Transition:
 
 May 2026
 --------------------------------------------------------------------------------
-Total Issues: 719
+Total Issues: 730
 QA Efforts Decreases: 5
-Update Rate: 0.70%
+Update Rate: 0.68%
 
 Decreases by Transition:
   2 → 1: 1 issues
@@ -215,9 +206,9 @@ Decreases by Transition:
 
 June 2026
 --------------------------------------------------------------------------------
-Total Issues: 704
+Total Issues: 706
 QA Efforts Decreases: 14
-Update Rate: 1.99%
+Update Rate: 1.98%
 
 Decreases by Transition:
   2 → 1: 4 issues
@@ -229,18 +220,20 @@ Decreases by Transition:
 
 July 2026
 --------------------------------------------------------------------------------
-Total Issues: 352
-QA Efforts Decreases: 6
-Update Rate: 1.70%
+Total Issues: 413
+QA Efforts Decreases: 11
+Update Rate: 2.66%
 
 Decreases by Transition:
-  2 → 1: 3 issues
-  3 → 2: 2 issues
+  2 → 1: 4 issues
+  3 → 2: 4 issues
+  5 → 3: 1 issues
   13 → 5: 1 issues
+  21 → 13: 1 issues
 
 
 SUMMARY - ALL MONTHS
 ================================================================================
-Total Issues Analyzed: 11955
-Total QA Efforts Decreases: 168
-Overall Update Rate: 1.41%
+Total Issues Analyzed: 11373
+Total QA Efforts Decreases: 167
+Overall Update Rate: 1.47%
