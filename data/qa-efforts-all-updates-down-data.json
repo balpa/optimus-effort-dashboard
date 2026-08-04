@@ -1018,7 +1018,7 @@
   },
   "july2026": {
     "name": "July 2026",
-    "totalIssues": 96,
+    "totalIssues": 100,
     "totalChanges": 4,
     "byBaseAndTarget": {
       "1": {},
@@ -1037,9 +1037,9 @@
     },
     "distribution": {
       "1": 4,
-      "2": 64,
-      "3": 19,
-      "5": 9
+      "2": 67,
+      "3": 18,
+      "5": 11
     },
     "keys": [
       {
@@ -1066,7 +1066,7 @@
   },
   "august2026": {
     "name": "August 2026",
-    "totalIssues": 0,
+    "totalIssues": 6,
     "totalChanges": 0,
     "byBaseAndTarget": {
       "1": {},
@@ -1079,7 +1079,11 @@
       "21": {},
       "34": {}
     },
-    "distribution": {},
+    "distribution": {
+      "1": 1,
+      "2": 4,
+      "3": 1
+    },
     "keys": []
   }
 }
