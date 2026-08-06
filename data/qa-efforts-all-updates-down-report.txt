@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-08-04T11:52:55.763Z
+Generated: 2026-08-06T11:53:11.912Z
 
 ============================================================
 March 2025
@@ -266,7 +266,7 @@ From 3 points (1 changes):
 ============================================================
 July 2026
 ============================================================
-Total Issues: 100
+Total Issues: 101
 Total QA Efforts Decreases: 4
 
 From 3 points (3 changes):
@@ -281,7 +281,7 @@ From 5 points (1 changes):
 ============================================================
 August 2026
 ============================================================
-Total Issues: 6
+Total Issues: 20
 Total QA Efforts Decreases: 0
 
 
@@ -613,13 +613,13 @@ June 2026:
 
 
 July 2026:
-  Total Issues: 100
+  Total Issues: 101
 
   QA Efforts Distribution:
     1 points: 4 (4.0%)
-    2 points: 67 (67.0%)
-    3 points: 18 (18.0%)
-    5 points: 11 (11.0%)
+    2 points: 68 (67.3%)
+    3 points: 18 (17.8%)
+    5 points: 11 (10.9%)
 
   QA Efforts Changes:
   Total Changes: 4
@@ -630,12 +630,12 @@ July 2026:
 
 
 August 2026:
-  Total Issues: 6
+  Total Issues: 20
 
   QA Efforts Distribution:
-    1 points: 1 (16.7%)
-    2 points: 4 (66.7%)
-    3 points: 1 (16.7%)
+    1 points: 1 (5.0%)
+    2 points: 12 (60.0%)
+    3 points: 7 (35.0%)
 
   QA Efforts Changes:
   Total Changes: 0
@@ -663,13 +663,13 @@ April 2026: 2.69
 May 2026: 2.75
 June 2026: 2.73
 July 2026: 2.47
-August 2026: 2.00
+August 2026: 2.30
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 2419
+Total Issues Across All Months: 2434
 Total QA Efforts Increases: 108
-Average QA Efforts Increase Rate: 4.46%
-Overall Average QA Efforts: 3.86
+Average QA Efforts Increase Rate: 4.44%
+Overall Average QA Efforts: 3.87
