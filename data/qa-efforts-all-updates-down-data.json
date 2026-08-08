@@ -1066,7 +1066,7 @@
   },
   "august2026": {
     "name": "August 2026",
-    "totalIssues": 20,
+    "totalIssues": 35,
     "totalChanges": 0,
     "byBaseAndTarget": {
       "1": {},
@@ -1081,8 +1081,9 @@
     },
     "distribution": {
       "1": 1,
-      "2": 12,
-      "3": 7
+      "2": 22,
+      "3": 11,
+      "5": 1
     },
     "keys": []
   }
