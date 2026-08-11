@@ -275,9 +275,9 @@ Increases by Transition:
 
 February 2026
 --------------------------------------------------------------------------------
-Total Issues: 647
+Total Issues: 648
 QA Efforts Increases: 83
-Update Rate: 12.83%
+Update Rate: 12.81%
 
 Increases by Transition:
   1 → 2: 8 issues
@@ -348,9 +348,9 @@ Increases by Transition:
 
 May 2026
 --------------------------------------------------------------------------------
-Total Issues: 740
+Total Issues: 741
 QA Efforts Increases: 100
-Update Rate: 13.51%
+Update Rate: 13.50%
 
 Increases by Transition:
   1 → 2: 12 issues
@@ -398,9 +398,9 @@ Increases by Transition:
 
 July 2026
 --------------------------------------------------------------------------------
-Total Issues: 679
-QA Efforts Increases: 94
-Update Rate: 13.84%
+Total Issues: 691
+QA Efforts Increases: 100
+Update Rate: 14.47%
 
 Increases by Transition:
   1 → 2: 14 issues
@@ -408,30 +408,34 @@ Increases by Transition:
   1 → 5: 2 issues
   1 → 8: 1 issues
   2 → 3: 18 issues
-  2 → 5: 6 issues
+  2 → 5: 8 issues
   2 → 13: 1 issues
-  3 → 5: 19 issues
+  3 → 5: 21 issues
   3 → 8: 6 issues
   3 → 13: 1 issues
   3 → 17: 1 issues
   5 → 8: 10 issues
   5 → 13: 3 issues
   5 → 17: 1 issues
-  8 → 13: 3 issues
-  8 → 17: 1 issues
+  8 → 13: 4 issues
+  8 → 17: 2 issues
 
 August 2026
 --------------------------------------------------------------------------------
-Total Issues: 46
-QA Efforts Increases: 1
-Update Rate: 2.17%
+Total Issues: 88
+QA Efforts Increases: 6
+Update Rate: 6.82%
 
 Increases by Transition:
+  1 → 2: 1 issues
   1 → 3: 1 issues
+  2 → 3: 2 issues
+  3 → 5: 1 issues
+  3 → 8: 1 issues
 
 
 SUMMARY - ALL MONTHS
 ================================================================================
-Total Issues Analyzed: 12354
-Total QA Efforts Increases: 1870
-Overall Update Rate: 15.14%
+Total Issues Analyzed: 12410
+Total QA Efforts Increases: 1881
+Overall Update Rate: 15.16%
