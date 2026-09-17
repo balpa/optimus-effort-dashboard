@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-09-15T14:52:44.671Z
+Generated: 2026-09-17T14:50:26.122Z
 
 ============================================================
 March 2025
@@ -181,7 +181,16 @@ From 13 points (1 changes):
     Keys: OPT-216281
 
 
-January 2026: ERROR - HTTP error! status: 400 - {"errorMessages":["Caught PSQLException for select /* called at com.atlassian.jira.entity.property.JsonEntityPropertyStoreImpl.lambda$getEntityProperties$36(JsonEntityPropertyStoreImpl.java:714) */\"ENTITY_PROPERTY\".\"id\", \"ENTITY_PROPERTY\".\"entity_name\", \"ENTITY_PROPERTY\".\"entity_id\", \"ENTITY_PROPERTY\".\"property_key\", \"ENTITY_PROPERTY\".\"created\", \"ENTITY_PROPERTY\".\"updated\", \"ENTITY_PROPERTY\".\"json_value\", \"ENTITY_PROPERTY\".\"version\", \"ENTITY_PROPERTY\".\"origin\"\nfrom \"public\".\"entity_property\" \"ENTITY_PROPERTY\"\nwhere \"ENTITY_PROPERTY\".\"entity_name\" = ? and \"ENTITY_PROPERTY\".\"entity_id\" = ANY(SELECT UNNEST(?)) and \"ENTITY_PROPERTY\".\"property_key\" = ?\norder by \"ENTITY_PROPERTY\".\"updated\" asc, \"ENTITY_PROPERTY\".\"id\" asc"]}
+============================================================
+January 2026
+============================================================
+Total Issues: 164
+Total QA Efforts Decreases: 2
+
+From 3 points (2 changes):
+  3 → 2: 2 changes
+    Keys: OPT-218675, OPT-217258
+
 
 ============================================================
 February 2026
@@ -283,7 +292,7 @@ From 3 points (4 changes):
 ============================================================
 September 2026
 ============================================================
-Total Issues: 50
+Total Issues: 57
 Total QA Efforts Decreases: 0
 
 
@@ -501,6 +510,24 @@ December 2025:
     13 → 8: 1
 
 
+January 2026:
+  Total Issues: 164
+
+  QA Efforts Distribution:
+    1 points: 4 (2.4%)
+    2 points: 5 (3.0%)
+    3 points: 84 (51.2%)
+    5 points: 44 (26.8%)
+    8 points: 17 (10.4%)
+    13 points: 8 (4.9%)
+    17 points: 2 (1.2%)
+
+  QA Efforts Changes:
+  Total Changes: 2
+  From 3: 2
+    3 → 2: 2
+
+
 February 2026:
   Total Issues: 188
 
@@ -631,12 +658,12 @@ August 2026:
 
 
 September 2026:
-  Total Issues: 50
+  Total Issues: 57
 
   QA Efforts Distribution:
-    2 points: 36 (72.0%)
-    3 points: 12 (24.0%)
-    5 points: 2 (4.0%)
+    2 points: 40 (70.2%)
+    3 points: 15 (26.3%)
+    5 points: 2 (3.5%)
 
   QA Efforts Changes:
   Total Changes: 0
@@ -657,6 +684,7 @@ September 2025: 5.13
 October 2025: 4.23
 November 2025: 4.04
 December 2025: 4.04
+January 2026: 4.63
 February 2026: 4.38
 March 2026: 3.14
 April 2026: 2.69
@@ -664,13 +692,13 @@ May 2026: 2.75
 June 2026: 2.73
 July 2026: 2.49
 August 2026: 2.69
-September 2026: 2.36
+September 2026: 2.37
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 2422
-Total QA Efforts Increases: 110
-Average QA Efforts Increase Rate: 4.54%
-Overall Average QA Efforts: 3.77
+Total Issues Across All Months: 2593
+Total QA Efforts Increases: 112
+Average QA Efforts Increase Rate: 4.32%
+Overall Average QA Efforts: 3.82
