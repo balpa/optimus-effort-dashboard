@@ -1114,7 +1114,7 @@
   },
   "september2026": {
     "name": "September 2026",
-    "totalIssues": 63,
+    "totalIssues": 74,
     "totalChanges": 0,
     "byBaseAndTarget": {
       "1": {},
@@ -1128,8 +1128,8 @@
       "34": {}
     },
     "distribution": {
-      "2": 47,
-      "3": 14,
+      "2": 56,
+      "3": 16,
       "5": 2
     },
     "keys": []
