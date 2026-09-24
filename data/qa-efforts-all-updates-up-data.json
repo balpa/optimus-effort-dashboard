@@ -3307,12 +3307,12 @@
   },
   "september2026": {
     "name": "September 2026",
-    "totalIssues": 74,
-    "totalChanges": 2,
+    "totalIssues": 83,
+    "totalChanges": 3,
     "byBaseAndTarget": {
       "1": {},
       "2": {
-        "3": 2
+        "3": 3
       },
       "3": {},
       "5": {},
@@ -3323,11 +3323,16 @@
       "34": {}
     },
     "distribution": {
-      "2": 56,
-      "3": 16,
+      "2": 63,
+      "3": 18,
       "5": 2
     },
     "keys": [
+      {
+        "key": "OPT-242870",
+        "from": 2,
+        "to": 3
+      },
       {
         "key": "OPT-242573",
         "from": 2,
