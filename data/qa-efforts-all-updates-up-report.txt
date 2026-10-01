@@ -1,5 +1,5 @@
 QA Efforts Analysis Report (QA tasks - 1/2/3/5/8/13/17/21/34→higher)
-Generated: 2026-09-29T16:00:15.718Z
+Generated: 2026-10-01T16:37:23.872Z
 
 ============================================================
 March 2025
@@ -466,7 +466,7 @@ From 3 points (4 changes):
 August 2026
 ============================================================
 Total Issues: 120
-Total QA Efforts Increases: 22
+Total QA Efforts Increases: 23
 
 From 2 points (11 changes):
   2 → 3: 6 changes
@@ -476,9 +476,9 @@ From 2 points (11 changes):
   2 → 8: 1 changes
     Keys: OPT-238493
 
-From 3 points (11 changes):
-  3 → 5: 9 changes
-    Keys: OPT-240856, OPT-240633, OPT-239711, OPT-239602, OPT-239520, OPT-239428, OPT-238843, OPT-238692, OPT-238399
+From 3 points (12 changes):
+  3 → 5: 10 changes
+    Keys: OPT-240856, OPT-240739, OPT-240633, OPT-239711, OPT-239602, OPT-239520, OPT-239428, OPT-238843, OPT-238692, OPT-238399
   3 → 8: 1 changes
     Keys: OPT-238363
   3 → 13: 1 changes
@@ -488,14 +488,21 @@ From 3 points (11 changes):
 ============================================================
 September 2026
 ============================================================
-Total Issues: 105
-Total QA Efforts Increases: 7
+Total Issues: 111
+Total QA Efforts Increases: 9
 
-From 2 points (7 changes):
-  2 → 3: 5 changes
-    Keys: OPT-243240, OPT-242987, OPT-242925, OPT-242573, OPT-242341
+From 2 points (9 changes):
+  2 → 3: 7 changes
+    Keys: OPT-243422, OPT-243313, OPT-243240, OPT-242987, OPT-242925, OPT-242573, OPT-242341
   2 → 5: 2 changes
     Keys: OPT-242625, OPT-242147
+
+
+============================================================
+October 2026
+============================================================
+Total Issues: 0
+Total QA Efforts Increases: 0
 
 
 
@@ -940,36 +947,45 @@ August 2026:
   QA Efforts Distribution:
     1 points: 4 (3.3%)
     2 points: 75 (62.5%)
-    3 points: 25 (20.8%)
-    5 points: 13 (10.8%)
+    3 points: 24 (20.0%)
+    5 points: 14 (11.7%)
     8 points: 2 (1.7%)
     13 points: 1 (0.8%)
 
   QA Efforts Changes:
-  Total Changes: 22
+  Total Changes: 23
   From 2: 11
     2 → 3: 6
     2 → 5: 4
     2 → 8: 1
-  From 3: 11
-    3 → 5: 9
+  From 3: 12
+    3 → 5: 10
     3 → 8: 1
     3 → 13: 1
 
 
 September 2026:
-  Total Issues: 105
+  Total Issues: 111
 
   QA Efforts Distribution:
-    2 points: 71 (67.6%)
-    3 points: 30 (28.6%)
-    5 points: 4 (3.8%)
+    2 points: 75 (67.6%)
+    3 points: 32 (28.8%)
+    5 points: 4 (3.6%)
 
   QA Efforts Changes:
-  Total Changes: 7
-  From 2: 7
-    2 → 3: 5
+  Total Changes: 9
+  From 2: 9
+    2 → 3: 7
     2 → 5: 2
+
+
+October 2026:
+  Total Issues: 0
+
+  QA Efforts Distribution:
+
+  QA Efforts Changes:
+  Total Changes: 0
 
 
 
@@ -994,14 +1010,15 @@ April 2026: 2.69
 May 2026: 2.75
 June 2026: 2.73
 July 2026: 2.49
-August 2026: 2.69
+August 2026: 2.71
 September 2026: 2.40
+October 2026: 0.00
 
 ============================================================
 SUMMARY
 ============================================================
 
-Total Issues Across All Months: 2641
-Total QA Efforts Increases: 538
-Average QA Efforts Increase Rate: 20.37%
-Overall Average QA Efforts: 3.82
+Total Issues Across All Months: 2647
+Total QA Efforts Increases: 541
+Average QA Efforts Increase Rate: 20.44%
+Overall Average QA Efforts: 3.63
