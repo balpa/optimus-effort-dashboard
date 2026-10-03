@@ -1274,7 +1274,7 @@
   },
   "may2026": {
     "name": "May 2026",
-    "totalIssues": 856,
+    "totalIssues": 857,
     "totalChanges": 6,
     "byBaseAndTarget": {
       "1": {},
@@ -1304,7 +1304,7 @@
       "13": 17,
       "17": 7,
       "21": 3,
-      "null": 179
+      "null": 180
     },
     "keys": [
       {
@@ -1588,14 +1588,14 @@
       "1": 114,
       "2": 176,
       "3": 144,
-      "5": 56,
+      "5": 57,
       "8": 29,
       "13": 7,
       "17": 2,
       "21": 3,
       "27": 1,
       "32": 1,
-      "null": 153
+      "null": 152
     },
     "keys": [
       {
@@ -1612,7 +1612,7 @@
   },
   "september2026": {
     "name": "September 2026",
-    "totalIssues": 686,
+    "totalIssues": 697,
     "totalChanges": 3,
     "byBaseAndTarget": {
       "1": {},
@@ -1630,15 +1630,15 @@
       "34": {}
     },
     "distribution": {
-      "1": 144,
-      "2": 216,
-      "3": 135,
-      "5": 39,
+      "1": 147,
+      "2": 217,
+      "3": 140,
+      "5": 40,
       "8": 23,
       "13": 8,
       "17": 1,
       "21": 2,
-      "null": 118
+      "null": 119
     },
     "keys": [
       {
@@ -1660,7 +1660,7 @@
   },
   "october2026": {
     "name": "October 2026",
-    "totalIssues": 0,
+    "totalIssues": 19,
     "totalChanges": 0,
     "byBaseAndTarget": {
       "1": {},
@@ -1673,7 +1673,12 @@
       "21": {},
       "34": {}
     },
-    "distribution": {},
+    "distribution": {
+      "1": 5,
+      "2": 9,
+      "3": 4,
+      "5": 1
+    },
     "keys": []
   }
 }
