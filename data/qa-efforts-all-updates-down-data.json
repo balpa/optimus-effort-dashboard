@@ -1128,15 +1128,15 @@
       "34": {}
     },
     "distribution": {
-      "2": 75,
-      "3": 33,
+      "2": 76,
+      "3": 32,
       "5": 4
     },
     "keys": []
   },
   "october2026": {
     "name": "October 2026",
-    "totalIssues": 4,
+    "totalIssues": 19,
     "totalChanges": 1,
     "byBaseAndTarget": {
       "1": {},
@@ -1152,8 +1152,8 @@
       "34": {}
     },
     "distribution": {
-      "2": 2,
-      "3": 2
+      "2": 15,
+      "3": 4
     },
     "keys": [
       {

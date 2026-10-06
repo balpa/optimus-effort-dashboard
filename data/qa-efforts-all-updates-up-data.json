@@ -3313,11 +3313,11 @@
   "september2026": {
     "name": "September 2026",
     "totalIssues": 112,
-    "totalChanges": 9,
+    "totalChanges": 8,
     "byBaseAndTarget": {
       "1": {},
       "2": {
-        "3": 7,
+        "3": 6,
         "5": 2
       },
       "3": {},
@@ -3329,18 +3329,13 @@
       "34": {}
     },
     "distribution": {
-      "2": 75,
-      "3": 33,
+      "2": 76,
+      "3": 32,
       "5": 4
     },
     "keys": [
       {
         "key": "OPT-243422",
-        "from": 2,
-        "to": 3
-      },
-      {
-        "key": "OPT-243313",
         "from": 2,
         "to": 3
       },
@@ -3383,11 +3378,13 @@
   },
   "october2026": {
     "name": "October 2026",
-    "totalIssues": 4,
-    "totalChanges": 0,
+    "totalIssues": 19,
+    "totalChanges": 1,
     "byBaseAndTarget": {
       "1": {},
-      "2": {},
+      "2": {
+        "3": 1
+      },
       "3": {},
       "5": {},
       "8": {},
@@ -3397,9 +3394,15 @@
       "34": {}
     },
     "distribution": {
-      "2": 2,
-      "3": 2
+      "2": 15,
+      "3": 4
     },
-    "keys": []
+    "keys": [
+      {
+        "key": "OPT-243841",
+        "from": 2,
+        "to": 3
+      }
+    ]
   }
 }
