@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→higher)
-Generated: 2026-10-08T16:20:10.387Z
+Generated: 2026-10-10T15:05:27.077Z
 
 ============================================================
 March 2025
@@ -866,7 +866,7 @@ From 21 points (2 changes):
 ============================================================
 May 2026
 ============================================================
-Total Issues: 875
+Total Issues: 879
 Total Story Point Increases: 272
 
 From 1 points (38 changes):
@@ -1138,7 +1138,7 @@ From 13 points (2 changes):
 ============================================================
 September 2026
 ============================================================
-Total Issues: 739
+Total Issues: 757
 Total Story Point Increases: 125
 
 From 1 points (13 changes):
@@ -1197,24 +1197,24 @@ From 13 points (1 changes):
 ============================================================
 October 2026
 ============================================================
-Total Issues: 148
-Total Story Point Increases: 11
+Total Issues: 207
+Total Story Point Increases: 12
 
 From 1 points (1 changes):
   1 → 3: 1 changes
     Keys: OPT-243992
 
-From 2 points (8 changes):
+From 2 points (7 changes):
   2 → 3: 7 changes
     Keys: OPT-244066, OPT-244013, OPT-244008, OPT-243888, OPT-243748, OPT-243660, OPT-243572
-  2 → 8: 1 changes
-    Keys: OPT-243718
 
-From 3 points (2 changes):
+From 3 points (4 changes):
   3 → 5: 1 changes
     Keys: OPT-244021
-  3 → 8: 1 changes
-    Keys: OPT-243719
+  3 → 8: 2 changes
+    Keys: OPT-244152, OPT-243719
+  3 → 17: 1 changes
+    Keys: OPT-243993
 
 
 
@@ -1873,15 +1873,15 @@ April 2026:
     21 → 218: 1
 
 May 2026:
-  Total Issues: 875
+  Total Issues: 879
 
   Story Point Distribution:
     No Story Points: 1 (0.1%)
     1 points: 62 (7.1%)
-    2 points: 348 (39.8%)
-    3 points: 216 (24.7%)
+    2 points: 352 (40.0%)
+    3 points: 216 (24.6%)
     5 points: 115 (13.1%)
-    8 points: 69 (7.9%)
+    8 points: 69 (7.8%)
     13 points: 30 (3.4%)
     17 points: 17 (1.9%)
     21 points: 10 (1.1%)
@@ -2029,11 +2029,11 @@ August 2026:
   Story Point Distribution:
     No Story Points: 1 (0.1%)
     1 points: 70 (10.2%)
-    2 points: 262 (38.1%)
+    2 points: 263 (38.2%)
     3 points: 185 (26.9%)
     5 points: 94 (13.7%)
     8 points: 43 (6.3%)
-    13 points: 17 (2.5%)
+    13 points: 16 (2.3%)
     17 points: 9 (1.3%)
     21 points: 4 (0.6%)
     27 points: 3 (0.4%)
@@ -2070,15 +2070,15 @@ August 2026:
     13 → 27: 2
 
 September 2026:
-  Total Issues: 739
+  Total Issues: 757
 
   Story Point Distribution:
-    1 points: 48 (6.5%)
-    2 points: 302 (40.9%)
-    3 points: 240 (32.5%)
-    5 points: 89 (12.0%)
-    8 points: 36 (4.9%)
-    13 points: 16 (2.2%)
+    1 points: 48 (6.3%)
+    2 points: 302 (39.9%)
+    3 points: 256 (33.8%)
+    5 points: 91 (12.0%)
+    8 points: 36 (4.8%)
+    13 points: 16 (2.1%)
     17 points: 7 (0.9%)
     44 points: 1 (0.1%)
 
@@ -2112,32 +2112,32 @@ September 2026:
     13 → 17: 1
 
 October 2026:
-  Total Issues: 148
+  Total Issues: 207
 
   Story Point Distribution:
-    No Story Points: 1 (0.7%)
-    1 points: 20 (13.5%)
-    2 points: 67 (45.3%)
-    3 points: 51 (34.5%)
-    5 points: 7 (4.7%)
-    8 points: 2 (1.4%)
+    1 points: 25 (12.1%)
+    2 points: 97 (46.9%)
+    3 points: 72 (34.8%)
+    5 points: 9 (4.3%)
+    8 points: 3 (1.4%)
+    17 points: 1 (0.5%)
 
   Story Point Changes:
-  Total Changes: 11
+  Total Changes: 12
   From 1: 1
     1 → 3: 1
-  From 2: 8
+  From 2: 7
     2 → 3: 7
-    2 → 8: 1
-  From 3: 2
+  From 3: 4
     3 → 5: 1
-    3 → 8: 1
+    3 → 8: 2
+    3 → 17: 1
 
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 14059
-Total Changes: 2717
+Total Issues: 14140
+Total Changes: 2718
 
 
 ============================================================
@@ -2717,8 +2717,8 @@ October 2026:
     1 → 3: OPT-243992
   From 2:
     2 → 3: OPT-244066, OPT-244013, OPT-244008, OPT-243888, OPT-243748, OPT-243660, OPT-243572
-    2 → 8: OPT-243718
   From 3:
     3 → 5: OPT-244021
-    3 → 8: OPT-243719
+    3 → 8: OPT-244152, OPT-243719
+    3 → 17: OPT-243993
 
