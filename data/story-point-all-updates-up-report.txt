@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→higher)
-Generated: 2026-10-20T14:11:20.994Z
+Generated: 2026-10-22T14:27:19.077Z
 
 ============================================================
 March 2025
@@ -866,7 +866,7 @@ From 21 points (2 changes):
 ============================================================
 May 2026
 ============================================================
-Total Issues: 902
+Total Issues: 913
 Total Story Point Increases: 308
 
 From 1 points (38 changes):
@@ -1080,7 +1080,7 @@ From 13 points (4 changes):
 August 2026
 ============================================================
 Total Issues: 689
-Total Story Point Increases: 156
+Total Story Point Increases: 157
 
 From 1 points (21 changes):
   1 → 2: 7 changes
@@ -1126,9 +1126,9 @@ From 5 points (28 changes):
   5 → 21: 2 changes
     Keys: OPT-240273, OPT-238907
 
-From 8 points (5 changes):
-  8 → 13: 2 changes
-    Keys: OPT-239965, OPT-239512
+From 8 points (6 changes):
+  8 → 13: 3 changes
+    Keys: OPT-240523, OPT-239965, OPT-239512
   8 → 17: 1 changes
     Keys: OPT-240476
   8 → 21: 2 changes
@@ -1142,8 +1142,8 @@ From 13 points (3 changes):
 ============================================================
 September 2026
 ============================================================
-Total Issues: 773
-Total Story Point Increases: 138
+Total Issues: 774
+Total Story Point Increases: 140
 
 From 1 points (13 changes):
   1 → 2: 8 changes
@@ -1163,9 +1163,9 @@ From 2 points (47 changes):
   2 → 13: 2 changes
     Keys: OPT-242134, OPT-241527
 
-From 3 points (49 changes):
-  3 → 5: 34 changes
-    Keys: OPT-243154, OPT-242963, OPT-242628, OPT-242611, OPT-242588, OPT-242495, OPT-242309, OPT-242245, OPT-242210, OPT-242057, OPT-242037, OPT-242030, OPT-242017, OPT-242015, OPT-242014, OPT-242009, OPT-241907, OPT-241784, OPT-241780, OPT-241650, OPT-241648, OPT-241560, OPT-241546, OPT-241538, OPT-241478, OPT-241434, OPT-241352, OPT-241345, OPT-241229, OPT-241200, OPT-241198, OPT-241105, OPT-241081, OPT-241051
+From 3 points (50 changes):
+  3 → 5: 35 changes
+    Keys: OPT-243154, OPT-242963, OPT-242628, OPT-242611, OPT-242588, OPT-242495, OPT-242309, OPT-242245, OPT-242210, OPT-242059, OPT-242057, OPT-242037, OPT-242030, OPT-242017, OPT-242015, OPT-242014, OPT-242009, OPT-241907, OPT-241784, OPT-241780, OPT-241650, OPT-241648, OPT-241560, OPT-241546, OPT-241538, OPT-241478, OPT-241434, OPT-241352, OPT-241345, OPT-241229, OPT-241200, OPT-241198, OPT-241105, OPT-241081, OPT-241051
   3 → 8: 9 changes
     Keys: OPT-243280, OPT-243096, OPT-242991, OPT-242990, OPT-242051, OPT-241841, OPT-241781, OPT-241311, OPT-241272
   3 → 9: 1 changes
@@ -1177,11 +1177,11 @@ From 3 points (49 changes):
   3 → 35: 1 changes
     Keys: OPT-243181
 
-From 5 points (22 changes):
+From 5 points (23 changes):
   5 → 8: 9 changes
     Keys: OPT-243179, OPT-242845, OPT-242462, OPT-242280, OPT-242009, OPT-241265, OPT-241192, OPT-241175, OPT-241081
-  5 → 13: 9 changes
-    Keys: OPT-242366, OPT-242285, OPT-242267, OPT-242223, OPT-242094, OPT-241717, OPT-241367, OPT-241226, OPT-241045
+  5 → 13: 10 changes
+    Keys: OPT-243222, OPT-242366, OPT-242285, OPT-242267, OPT-242223, OPT-242094, OPT-241717, OPT-241367, OPT-241226, OPT-241045
   5 → 17: 4 changes
     Keys: OPT-243202, OPT-242950, OPT-242252, OPT-241332
 
@@ -1201,28 +1201,36 @@ From 13 points (1 changes):
 ============================================================
 October 2026
 ============================================================
-Total Issues: 513
-Total Story Point Increases: 55
+Total Issues: 603
+Total Story Point Increases: 69
 
-From 1 points (7 changes):
-  1 → 2: 4 changes
-    Keys: OPT-244744, OPT-244580, OPT-244328, OPT-243928
+From 1 points (9 changes):
+  1 → 2: 5 changes
+    Keys: OPT-244881, OPT-244744, OPT-244580, OPT-244328, OPT-243928
   1 → 3: 3 changes
     Keys: OPT-244827, OPT-244099, OPT-243992
+  1 → 5: 1 changes
+    Keys: OPT-244671
 
-From 2 points (23 changes):
-  2 → 3: 17 changes
-    Keys: OPT-245090, OPT-245069, OPT-244898, OPT-244878, OPT-244846, OPT-244727, OPT-244622, OPT-244505, OPT-244076, OPT-244066, OPT-244013, OPT-244008, OPT-243888, OPT-243884, OPT-243748, OPT-243660, OPT-243572
-  2 → 5: 6 changes
-    Keys: OPT-245067, OPT-244998, OPT-244487, OPT-244191, OPT-244155, OPT-243703
+From 2 points (28 changes):
+  2 → 3: 18 changes
+    Keys: OPT-245219, OPT-245090, OPT-245069, OPT-244898, OPT-244878, OPT-244846, OPT-244727, OPT-244622, OPT-244505, OPT-244076, OPT-244066, OPT-244013, OPT-244008, OPT-243888, OPT-243884, OPT-243748, OPT-243660, OPT-243572
+  2 → 5: 9 changes
+    Keys: OPT-245118, OPT-245067, OPT-244998, OPT-244737, OPT-244487, OPT-244417, OPT-244191, OPT-244155, OPT-243703
+  2 → 8: 1 changes
+    Keys: OPT-245423
 
-From 3 points (25 changes):
-  3 → 5: 16 changes
-    Keys: OPT-244891, OPT-244816, OPT-244697, OPT-244633, OPT-244543, OPT-244377, OPT-244270, OPT-244265, OPT-244201, OPT-244141, OPT-244123, OPT-244077, OPT-244021, OPT-243984, OPT-243892, OPT-243875
-  3 → 8: 7 changes
-    Keys: OPT-244686, OPT-244330, OPT-244244, OPT-244152, OPT-243963, OPT-243731, OPT-243719
+From 3 points (31 changes):
+  3 → 5: 20 changes
+    Keys: OPT-245169, OPT-244957, OPT-244945, OPT-244896, OPT-244891, OPT-244697, OPT-244633, OPT-244543, OPT-244377, OPT-244270, OPT-244265, OPT-244201, OPT-244141, OPT-244123, OPT-244077, OPT-244021, OPT-243984, OPT-243937, OPT-243892, OPT-243875
+  3 → 8: 9 changes
+    Keys: OPT-244734, OPT-244686, OPT-244330, OPT-244244, OPT-244152, OPT-243963, OPT-243937, OPT-243731, OPT-243719
   3 → 17: 2 changes
     Keys: OPT-244595, OPT-243993
+
+From 5 points (1 changes):
+  5 → 8: 1 changes
+    Keys: OPT-244826
 
 
 
@@ -1881,18 +1889,18 @@ April 2026:
     21 → 218: 1
 
 May 2026:
-  Total Issues: 902
+  Total Issues: 913
 
   Story Point Distribution:
     No Story Points: 1 (0.1%)
-    1 points: 62 (6.9%)
-    2 points: 338 (37.5%)
-    3 points: 221 (24.5%)
-    5 points: 127 (14.1%)
-    8 points: 73 (8.1%)
-    13 points: 34 (3.8%)
+    1 points: 62 (6.8%)
+    2 points: 349 (38.2%)
+    3 points: 221 (24.2%)
+    5 points: 127 (13.9%)
+    8 points: 73 (8.0%)
+    13 points: 34 (3.7%)
     17 points: 22 (2.4%)
-    21 points: 15 (1.7%)
+    21 points: 15 (1.6%)
     27 points: 4 (0.4%)
     34 points: 4 (0.4%)
     55 points: 1 (0.1%)
@@ -2042,14 +2050,14 @@ August 2026:
     2 points: 262 (38.0%)
     3 points: 185 (26.9%)
     5 points: 94 (13.6%)
-    8 points: 44 (6.4%)
-    13 points: 16 (2.3%)
+    8 points: 43 (6.2%)
+    13 points: 17 (2.5%)
     17 points: 9 (1.3%)
     21 points: 4 (0.6%)
     27 points: 4 (0.6%)
 
   Story Point Changes:
-  Total Changes: 156
+  Total Changes: 157
   From 1: 21
     1 → 2: 7
     1 → 3: 9
@@ -2072,28 +2080,28 @@ August 2026:
     5 → 13: 9
     5 → 17: 4
     5 → 21: 2
-  From 8: 5
-    8 → 13: 2
+  From 8: 6
+    8 → 13: 3
     8 → 17: 1
     8 → 21: 2
   From 13: 3
     13 → 27: 3
 
 September 2026:
-  Total Issues: 773
+  Total Issues: 774
 
   Story Point Distribution:
     1 points: 49 (6.3%)
-    2 points: 303 (39.2%)
+    2 points: 303 (39.1%)
     3 points: 256 (33.1%)
     5 points: 99 (12.8%)
     8 points: 38 (4.9%)
-    13 points: 16 (2.1%)
+    13 points: 17 (2.2%)
     17 points: 11 (1.4%)
     44 points: 1 (0.1%)
 
   Story Point Changes:
-  Total Changes: 138
+  Total Changes: 140
   From 1: 13
     1 → 2: 8
     1 → 3: 4
@@ -2103,16 +2111,16 @@ September 2026:
     2 → 5: 17
     2 → 8: 1
     2 → 13: 2
-  From 3: 49
-    3 → 5: 34
+  From 3: 50
+    3 → 5: 35
     3 → 8: 9
     3 → 9: 1
     3 → 13: 1
     3 → 17: 3
     3 → 35: 1
-  From 5: 22
+  From 5: 23
     5 → 8: 9
-    5 → 13: 9
+    5 → 13: 10
     5 → 17: 4
   From 8: 6
     8 → 13: 3
@@ -2122,34 +2130,38 @@ September 2026:
     13 → 17: 1
 
 October 2026:
-  Total Issues: 513
+  Total Issues: 603
 
   Story Point Distribution:
-    1 points: 52 (10.1%)
-    2 points: 225 (43.9%)
-    3 points: 185 (36.1%)
-    5 points: 40 (7.8%)
-    8 points: 9 (1.8%)
-    17 points: 2 (0.4%)
+    1 points: 61 (10.1%)
+    2 points: 259 (43.0%)
+    3 points: 214 (35.5%)
+    5 points: 54 (9.0%)
+    8 points: 13 (2.2%)
+    17 points: 2 (0.3%)
 
   Story Point Changes:
-  Total Changes: 55
-  From 1: 7
-    1 → 2: 4
+  Total Changes: 69
+  From 1: 9
+    1 → 2: 5
     1 → 3: 3
-  From 2: 23
-    2 → 3: 17
-    2 → 5: 6
-  From 3: 25
-    3 → 5: 16
-    3 → 8: 7
+    1 → 5: 1
+  From 2: 28
+    2 → 3: 18
+    2 → 5: 9
+    2 → 8: 1
+  From 3: 31
+    3 → 5: 20
+    3 → 8: 9
     3 → 17: 2
+  From 5: 1
+    5 → 8: 1
 
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 14486
-Total Changes: 2812
+Total Issues: 14588
+Total Changes: 2829
 
 
 ============================================================
@@ -2692,7 +2704,7 @@ August 2026:
     5 → 17: OPT-240841, OPT-240832, OPT-239792, OPT-239376
     5 → 21: OPT-240273, OPT-238907
   From 8:
-    8 → 13: OPT-239965, OPT-239512
+    8 → 13: OPT-240523, OPT-239965, OPT-239512
     8 → 17: OPT-240476
     8 → 21: OPT-239810, OPT-238776
   From 13:
@@ -2709,7 +2721,7 @@ September 2026:
     2 → 8: OPT-241297
     2 → 13: OPT-242134, OPT-241527
   From 3:
-    3 → 5: OPT-243154, OPT-242963, OPT-242628, OPT-242611, OPT-242588, OPT-242495, OPT-242309, OPT-242245, OPT-242210, OPT-242057, OPT-242037, OPT-242030, OPT-242017, OPT-242015, OPT-242014, OPT-242009, OPT-241907, OPT-241784, OPT-241780, OPT-241650, OPT-241648, OPT-241560, OPT-241546, OPT-241538, OPT-241478, OPT-241434, OPT-241352, OPT-241345, OPT-241229, OPT-241200, OPT-241198, OPT-241105, OPT-241081, OPT-241051
+    3 → 5: OPT-243154, OPT-242963, OPT-242628, OPT-242611, OPT-242588, OPT-242495, OPT-242309, OPT-242245, OPT-242210, OPT-242059, OPT-242057, OPT-242037, OPT-242030, OPT-242017, OPT-242015, OPT-242014, OPT-242009, OPT-241907, OPT-241784, OPT-241780, OPT-241650, OPT-241648, OPT-241560, OPT-241546, OPT-241538, OPT-241478, OPT-241434, OPT-241352, OPT-241345, OPT-241229, OPT-241200, OPT-241198, OPT-241105, OPT-241081, OPT-241051
     3 → 8: OPT-243280, OPT-243096, OPT-242991, OPT-242990, OPT-242051, OPT-241841, OPT-241781, OPT-241311, OPT-241272
     3 → 9: OPT-243008
     3 → 13: OPT-241543
@@ -2717,7 +2729,7 @@ September 2026:
     3 → 35: OPT-243181
   From 5:
     5 → 8: OPT-243179, OPT-242845, OPT-242462, OPT-242280, OPT-242009, OPT-241265, OPT-241192, OPT-241175, OPT-241081
-    5 → 13: OPT-242366, OPT-242285, OPT-242267, OPT-242223, OPT-242094, OPT-241717, OPT-241367, OPT-241226, OPT-241045
+    5 → 13: OPT-243222, OPT-242366, OPT-242285, OPT-242267, OPT-242223, OPT-242094, OPT-241717, OPT-241367, OPT-241226, OPT-241045
     5 → 17: OPT-243202, OPT-242950, OPT-242252, OPT-241332
   From 8:
     8 → 13: OPT-242980, OPT-241741, OPT-241202
@@ -2728,13 +2740,17 @@ September 2026:
 
 October 2026:
   From 1:
-    1 → 2: OPT-244744, OPT-244580, OPT-244328, OPT-243928
+    1 → 2: OPT-244881, OPT-244744, OPT-244580, OPT-244328, OPT-243928
     1 → 3: OPT-244827, OPT-244099, OPT-243992
+    1 → 5: OPT-244671
   From 2:
-    2 → 3: OPT-245090, OPT-245069, OPT-244898, OPT-244878, OPT-244846, OPT-244727, OPT-244622, OPT-244505, OPT-244076, OPT-244066, OPT-244013, OPT-244008, OPT-243888, OPT-243884, OPT-243748, OPT-243660, OPT-243572
-    2 → 5: OPT-245067, OPT-244998, OPT-244487, OPT-244191, OPT-244155, OPT-243703
+    2 → 3: OPT-245219, OPT-245090, OPT-245069, OPT-244898, OPT-244878, OPT-244846, OPT-244727, OPT-244622, OPT-244505, OPT-244076, OPT-244066, OPT-244013, OPT-244008, OPT-243888, OPT-243884, OPT-243748, OPT-243660, OPT-243572
+    2 → 5: OPT-245118, OPT-245067, OPT-244998, OPT-244737, OPT-244487, OPT-244417, OPT-244191, OPT-244155, OPT-243703
+    2 → 8: OPT-245423
   From 3:
-    3 → 5: OPT-244891, OPT-244816, OPT-244697, OPT-244633, OPT-244543, OPT-244377, OPT-244270, OPT-244265, OPT-244201, OPT-244141, OPT-244123, OPT-244077, OPT-244021, OPT-243984, OPT-243892, OPT-243875
-    3 → 8: OPT-244686, OPT-244330, OPT-244244, OPT-244152, OPT-243963, OPT-243731, OPT-243719
+    3 → 5: OPT-245169, OPT-244957, OPT-244945, OPT-244896, OPT-244891, OPT-244697, OPT-244633, OPT-244543, OPT-244377, OPT-244270, OPT-244265, OPT-244201, OPT-244141, OPT-244123, OPT-244077, OPT-244021, OPT-243984, OPT-243937, OPT-243892, OPT-243875
+    3 → 8: OPT-244734, OPT-244686, OPT-244330, OPT-244244, OPT-244152, OPT-243963, OPT-243937, OPT-243731, OPT-243719
     3 → 17: OPT-244595, OPT-243993
+  From 5:
+    5 → 8: OPT-244826
 

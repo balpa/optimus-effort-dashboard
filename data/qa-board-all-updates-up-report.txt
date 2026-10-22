@@ -53,14 +53,28 @@ Increases by Transition:
 
 May 2025
 --------------------------------------------------------------------------------
-ERROR: HTTP error! status: 504 - <html>
-<head><title>504 Gateway Time-out</title></head>
-<body>
-<center><h1>504 Gateway Time-out</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
+Total Issues: 830
+QA Efforts Increases: 111
+Update Rate: 13.37%
 
+Increases by Transition:
+  1 → 2: 22 issues
+  1 → 3: 8 issues
+  1 → 8: 3 issues
+  2 → 3: 22 issues
+  2 → 5: 8 issues
+  2 → 8: 2 issues
+  3 → 5: 18 issues
+  3 → 8: 11 issues
+  3 → 13: 2 issues
+  3 → 17: 1 issues
+  3 → 21: 1 issues
+  5 → 8: 6 issues
+  5 → 13: 1 issues
+  5 → 17: 2 issues
+  8 → 13: 2 issues
+  17 → 21: 1 issues
+  21 → 27: 1 issues
 
 June 2025
 --------------------------------------------------------------------------------
@@ -334,9 +348,9 @@ Increases by Transition:
 
 May 2026
 --------------------------------------------------------------------------------
-Total Issues: 903
+Total Issues: 913
 QA Efforts Increases: 100
-Update Rate: 11.07%
+Update Rate: 10.95%
 
 Increases by Transition:
   1 → 2: 12 issues
@@ -434,12 +448,12 @@ Increases by Transition:
 
 September 2026
 --------------------------------------------------------------------------------
-Total Issues: 773
-QA Efforts Increases: 100
-Update Rate: 12.94%
+Total Issues: 774
+QA Efforts Increases: 101
+Update Rate: 13.05%
 
 Increases by Transition:
-  1 → 2: 19 issues
+  1 → 2: 20 issues
   1 → 3: 14 issues
   1 → 5: 1 issues
   1 → 8: 1 issues
@@ -460,20 +474,20 @@ Increases by Transition:
 
 October 2026
 --------------------------------------------------------------------------------
-Total Issues: 516
-QA Efforts Increases: 47
-Update Rate: 9.11%
+Total Issues: 605
+QA Efforts Increases: 59
+Update Rate: 9.75%
 
 Increases by Transition:
   1 → 2: 16 issues
-  1 → 3: 3 issues
-  1 → 5: 1 issues
+  1 → 3: 5 issues
+  1 → 5: 2 issues
   1 → 8: 1 issues
-  2 → 3: 10 issues
+  2 → 3: 15 issues
   2 → 5: 6 issues
   2 → 8: 1 issues
   2 → 13: 1 issues
-  3 → 5: 5 issues
+  3 → 5: 9 issues
   3 → 13: 1 issues
   8 → 13: 1 issues
   8 → 21: 1 issues
@@ -481,6 +495,6 @@ Increases by Transition:
 
 SUMMARY - ALL MONTHS
 ================================================================================
-Total Issues Analyzed: 13660
-Total QA Efforts Increases: 2022
-Overall Update Rate: 14.80%
+Total Issues Analyzed: 14590
+Total QA Efforts Increases: 2146
+Overall Update Rate: 14.71%
