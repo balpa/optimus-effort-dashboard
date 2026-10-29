@@ -3373,7 +3373,7 @@
   },
   "october2026": {
     "name": "October 2026",
-    "totalIssues": 178,
+    "totalIssues": 190,
     "totalChanges": 17,
     "byBaseAndTarget": {
       "1": {},
@@ -3393,7 +3393,7 @@
       "34": {}
     },
     "distribution": {
-      "2": 119,
+      "2": 131,
       "3": 54,
       "5": 4,
       "8": 1

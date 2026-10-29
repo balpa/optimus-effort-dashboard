@@ -1,5 +1,5 @@
 Story Point Analysis Report (1/2/3/5/8/13/17/21/34→lower)
-Generated: 2026-10-27T15:26:23.262Z
+Generated: 2026-10-29T16:13:57.025Z
 
 ============================================================
 March 2025
@@ -398,7 +398,7 @@ From 21 points (1 changes):
 ============================================================
 May 2026
 ============================================================
-Total Issues: 917
+Total Issues: 918
 Total Story Point Decreases: 25
 
 From 2 points (4 changes):
@@ -525,7 +525,7 @@ From 8 points (1 changes):
 ============================================================
 October 2026
 ============================================================
-Total Issues: 730
+Total Issues: 792
 Total Story Point Decreases: 12
 
 From 3 points (10 changes):
@@ -965,12 +965,12 @@ April 2026:
     21 → 1: 1
 
 May 2026:
-  Total Issues: 917
+  Total Issues: 918
 
   Story Point Distribution:
     No Story Points: 1 (0.1%)
     1 points: 62 (6.8%)
-    2 points: 338 (36.9%)
+    2 points: 339 (36.9%)
     3 points: 225 (24.5%)
     5 points: 130 (14.2%)
     8 points: 76 (8.3%)
@@ -1102,14 +1102,14 @@ September 2026:
     8 → 3: 1
 
 October 2026:
-  Total Issues: 730
+  Total Issues: 792
 
   Story Point Distribution:
-    1 points: 73 (10.0%)
-    2 points: 318 (43.6%)
-    3 points: 253 (34.7%)
-    5 points: 66 (9.0%)
-    8 points: 17 (2.3%)
+    1 points: 79 (10.0%)
+    2 points: 346 (43.7%)
+    3 points: 275 (34.7%)
+    5 points: 71 (9.0%)
+    8 points: 18 (2.3%)
     13 points: 1 (0.1%)
     17 points: 2 (0.3%)
 
@@ -1126,7 +1126,7 @@ October 2026:
 ============================================================
 GRAND TOTALS
 ============================================================
-Total Issues: 14720
+Total Issues: 14783
 Total Changes: 463
 
 
