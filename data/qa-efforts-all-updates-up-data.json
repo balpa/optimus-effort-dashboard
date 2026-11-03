@@ -3373,7 +3373,7 @@
   },
   "october2026": {
     "name": "October 2026",
-    "totalIssues": 199,
+    "totalIssues": 229,
     "totalChanges": 17,
     "byBaseAndTarget": {
       "1": {},
@@ -3393,8 +3393,8 @@
       "34": {}
     },
     "distribution": {
-      "2": 138,
-      "3": 56,
+      "2": 159,
+      "3": 65,
       "5": 4,
       "8": 1
     },
@@ -3485,5 +3485,26 @@
         "to": 3
       }
     ]
+  },
+  "november2026": {
+    "name": "November 2026",
+    "totalIssues": 7,
+    "totalChanges": 0,
+    "byBaseAndTarget": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "5": {},
+      "8": {},
+      "13": {},
+      "17": {},
+      "21": {},
+      "34": {}
+    },
+    "distribution": {
+      "2": 6,
+      "3": 1
+    },
+    "keys": []
   }
 }
