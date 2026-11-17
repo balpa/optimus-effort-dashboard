@@ -3500,7 +3500,7 @@
   },
   "november2026": {
     "name": "November 2026",
-    "totalIssues": 97,
+    "totalIssues": 117,
     "totalChanges": 2,
     "byBaseAndTarget": {
       "1": {
@@ -3518,8 +3518,8 @@
       "34": {}
     },
     "distribution": {
-      "2": 74,
-      "3": 23
+      "2": 90,
+      "3": 27
     },
     "keys": [
       {
