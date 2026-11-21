@@ -3500,11 +3500,11 @@
   },
   "november2026": {
     "name": "November 2026",
-    "totalIssues": 142,
-    "totalChanges": 6,
+    "totalIssues": 166,
+    "totalChanges": 7,
     "byBaseAndTarget": {
       "1": {
-        "2": 1
+        "2": 2
       },
       "2": {
         "3": 5
@@ -3518,15 +3518,19 @@
       "34": {}
     },
     "distribution": {
-      "1": 1,
-      "2": 104,
-      "3": 37
+      "2": 123,
+      "3": 43
     },
     "keys": [
       {
         "key": "OPT-248008",
         "from": 2,
         "to": 3
+      },
+      {
+        "key": "OPT-247960",
+        "from": 1,
+        "to": 2
       },
       {
         "key": "OPT-247389",
